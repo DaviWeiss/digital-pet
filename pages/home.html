@@ -13,22 +13,233 @@
         <div class="shipping">
             <span>Frete grátis para todo o Brasil</span>
         </div>
-        <div class="header-mobile">
+        <section class="header-mobile">
             <div class="row box-logo-mobile">
-                <img src="/images/burguer-menu.svg" alt="Burguer menu">
-                <img src="/images/logo-mobile.svg" alt="Logo digital pet">
-                <img src="/images/carrinho-mobile.svg" alt="Imagem carrinho">
+                <a onclick="toggleMenu()">
+                    <img src="/images/header/burguer-menu.svg" alt="Burguer menu">
+                </a>
+                <img src="/images/header/logo-mobile.svg" alt="Logo digital pet">
+                <img src="/images/header/icone-carrinho-mobile.svg" alt="Imagem carrinho">
             </div>
             <input type="text" placeholder="O que você precisa?">
-        </div>
+        </section>
     </header>
 
     <main>
+        <div class="lista-links-mobile">
+            <nav class="sidebar">
+                <div class="items">
+                    <div class="topo-sidebar">
+                        <h3>Olá, Bem-Vindo (a)</h3>
+                        <a onclick="toggleMenu()">
+                            <img src="/images/header/icone-fechar-menu-mobile.svg" alt="Ícone fechar sidebar">
+                        </a>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <img src="/images/header/icone-entrar-mobile.svg">
+                                Entrar/Cadastrar
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <img src="/images/header/icone-meu-perfil.svg">
+                                Meu Perfil
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <img src="/images/header/icone-carrinho-mobile.svg">
+                                Carrinho
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <img src="/images/header/icone-seu-pet.svg">
+                                Seu Pet
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <img src="/images/header/icone-planos.svg">
+                                Planos DigitalPet
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <img src="/images/header/icone-atendimento.svg">
+                                Atendimento
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
+        <section class="banners">
+            <div class="banner-carrosel">
+                <a href="#">
+                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
+                </a>
+                <a href="#">
+                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
+                </a>
+            </div>
+        </section>
+
+        <section class="cards-infos">
+            <div class="box-card">
+                <img src="/images/home/icone-relogio.svg" alt="Ícone relógio do card receba em horas na home">
+                <span>Receba em Horas</span>
+            </div>
+            <div class="box-card">
+                <img src="/images/home/icone-frete-gratis.svg" alt="Ícone caminhão do card frete grátis na home">
+                <span>Frete Grátis Brasil</span>
+            </div>
+            <div class="box-card">
+                <img src="/images/home/icone-cartao.svg" alt="Ícone cartão do card 3x sem juros">
+                <span>Até 3x Sem Juros</span>
+            </div>
+            <div class="box-card">
+                <img src="/images/home/icone-frete-gratis.svg" alt="Ícone patinha de cachorro do card 10% off para vips">
+                <span>10% Off para Vips</span>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>Produtos Populares</h2>
+            <div class="content-products column">
+                <div class="box-products column">
+                    <img src="/images/products/popular/product-1.svg" alt="Produto">
+                    <p>Ração Premier Raças Específicas Shih Tzu para Cães Filhotes</p>
+                    <strong>R$ 95,90</strong>
+                    <span>5x de R$ 19,18 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/popular/product-2.svg" alt="Produto">
+                    <p>Ração Úmida Pedigree Sachê Carne ao Molho para Cães Adultos de Raças Pequenas 100 g</p>
+                    <strong>R$ 2,89</strong>
+                    <span>1x de R$ 2,89 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/popular/product-3.svg" alt="Produto">
+                    <p>Areia Sanitária Baw Waw Beauty Pet para Gatos 4 kg</p>
+                    <strong>R$ 8,99</strong>
+                    <span>1x de R$ 8,99 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/popular/product-4.svg" alt="Produto">
+                    <p>Petisco Pedigree Dentastix Cuidado Oral Para Cães Adultos Raças Grandes 7 Unidades</p>
+                    <strong>R$ 25,40</strong>
+                    <span>2x de R$ 12,70 sem juros no cartão de crédito</span>
+                </div>
+            </div>
+            <h2>Novidades</h2>
+            <div class="content-products column">
+                <div class="box-products column">
+                    <img src="/images/products/new/product-5.svg" alt="Produto">
+                    <p>Arranhador Hello Pet Rampa Branca para Gatos</p>
+                    <strong>R$ 219,99</strong>
+                    <span>5x de R$ 43,99 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/new/product-6.svg" alt="Produto">
+                    <p>Casa Furacão para Cães Preta</p>
+                    <strong>R$ 54,99</strong>
+                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/new/product-7.svg" alt="Produto">
+                    <p>Shampoo Dermatológico Sebolytic SIS para Cães 250ml</p>
+                    <strong>R$ 235,99</strong>
+                    <span>5x de R$ 47,19 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/new/product-8.svg" alt="Produto">
+                    <p>Arranhador Hello Pet Sisal e Pelúcia Bege com Mola para Gatos</p>
+                    <strong>R$ 54,99</strong>
+                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
+                </div>
+            </div>
+            <h2>Outros Produtos</h2>
+            <div class="content-products column">
+                <div class="box-products column">
+                    <img src="/images/products/new/product-5.svg" alt="Produto">
+                    <p>Arranhador Hello Pet Rampa Branca para Gatos</p>
+                    <strong>R$ 219,99</strong>
+                    <span>5x de R$ 43,99 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/new/product-6.svg" alt="Produto">
+                    <p>Casa Furacão para Cães Preta</p>
+                    <strong>R$ 54,99</strong>
+                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/new/product-7.svg" alt="Produto">
+                    <p>Shampoo Dermatológico Sebolytic SIS para Cães 250ml</p>
+                    <strong>R$ 235,99</strong>
+                    <span>5x de R$ 47,19 sem juros no cartão de crédito</span>
+                </div>
+                <div class="box-products column">
+                    <img src="/images/products/new/product-8.svg" alt="Produto">
+                    <p>Arranhador Hello Pet Sisal e Pelúcia Bege com Mola para Gatos</p>
+                    <strong>R$ 54,99</strong>
+                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="receive-news">
+            <div class="title-receive-news">
+                <img src="/images/others/email.svg" alt="Icone email para receber novidades">
+                <span>Receba novidades e promoções</span>
+            </div>
+            <div class="input-receive-news">
+                <input type="text" placeholder="Seu nome">
+                <input type="text" placeholder="Seu e-mail">
+                <button type="button">Eu quero</button>
+            </div>
+        </section>
     </main>
 
     <footer>
+        <section class="footer-mobile">
+            <img class="logo-mobile" src="/images/header/logo-mobile.svg" alt="Logo digital pet">
+            <div class="contacts column">
+                <h4 class="text bold">Central de atendimento</h4>
+                <span>(xx) x xxxx-xxxx</span>
+                <span>contato@digitalpet.com</span>
+                <span>Segunda a Sábado das 10h-17h</span>
+            </div>
+            <div class="page-about">
+                <span>Sobre nós</span>
+                <span>Contato</span>
+            </div>
 
+            <div class="box-payment column">
+                <h4 class="text bold">Central de atendimento</h4>
+                <img src="/images/footer/payment-options-1.svg" alt="Forma de pagamento (Bandeiras)">
+                <img src="/images/footer/payment-options-2.svg" alt="Forma de pagamento (Bandeiras)">
+            </div>
+
+            
+            <div class="box-security column align-center">
+                <h4 class="text bold">Segurança</h4>
+                <div class="row security-imgs">
+                    <img src="/images/footer/security-google.svg" alt="Selo de Segurança Google">
+                    <img src="/images/footer/security-site.svg" alt="Selo de Segurança Site">
+                </div>
+            </div>
+
+            <div class="column">
+                <span>Digital Pet Comércio de Produtos para Animais S.A</span>
+                <span>CNPJ: xx.xxx.xxx/xxxx-xx</span>
+                <span>Av. Norte xxxx, Recife - PE, 52.051-000, Brasil</span>
+            </div>
+        </section>
     </footer>
+    <script src="/scripts/global.js"></script>
 </body>
 </html>
