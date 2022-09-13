@@ -1,0 +1,89 @@
+:root {
+    --background: #F4F0EB;
+    --text: #151616;
+    --link: #797575;
+    --white: #fff;
+    --button: #893B67;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans';
+    color: var(--text);
+    background: var(--background);
+}
+
+a{
+    text-decoration: none;
+    color: var(--link);
+}
+
+ul {
+    list-style: none;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-mobile{
+    padding: 20px;
+    background: #FAF0E2;
+}
+
+.header-mobile input{
+    height: 55px;
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #703A44;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--text);
+    background-image: url("/images/lupa-input.svg");
+    background-repeat: no-repeat;
+    background-position: 12px;
+}
+
+.header-mobile input::placeholder{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--text);
+}
+
+.box-logo-mobile{
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.shipping{
+    background: #F3DAB4;
+    text-align: center;
+    padding: 10px;
+}
+
+.shipping span{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #000000;
+}
