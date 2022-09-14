@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    width: 270px;
+    width: 250px;
     padding: 25px 15px;
     background: #FBE8CC;
     justify-content: center;
@@ -62,6 +62,9 @@
     padding: 0 20px;
     margin-bottom: 40px;
     align-items: center;   
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .products h2{
@@ -80,6 +83,7 @@
     margin-bottom: 20px;
     justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .box-products{
@@ -143,5 +147,13 @@
 
     .content-products{
         flex-direction: row;
+        width: 68%;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .content-products{
+        flex-direction: row;
+        width: 100%;
     }
 }

@@ -50,6 +50,10 @@ textarea:focus, input:focus, select:focus {
     flex-direction: column;
 }
 
+.left{
+    align-items: flex-start;
+}
+
 .align-center {
     align-items: center;
 }
@@ -95,7 +99,7 @@ textarea:focus, input:focus, select:focus {
     background: #FAF0E2;
 }
 
-.header-mobile input{
+.header-mobile input, .header-desktop input{
     height: 55px;
     background: transparent;
     width: 100%;
@@ -105,9 +109,13 @@ textarea:focus, input:focus, select:focus {
     font-size: 20px;
     line-height: 27px;
     color: var(--text);
-    background-image: url("/images/lupa-input.svg");
+    background-image: url("/images/header/lupa-input.svg");
     background-repeat: no-repeat;
     background-position: 12px;
+}
+
+.header-desktop input{
+    width: 440px;
 }
 
 .header-mobile input::placeholder{
@@ -127,6 +135,10 @@ textarea:focus, input:focus, select:focus {
     background: #F3DAB4;
     text-align: center;
     padding: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .shipping span{
@@ -174,16 +186,25 @@ textarea:focus, input:focus, select:focus {
 }
 
 
-.footer-mobile{
+.footer-mobile, .footer-desktop{
     background: #F3DAB4;
-    padding: 0 20px 20px 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
-.logo-mobile{
+.footer-mobile{
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-desktop {
+    padding: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.logo{
     margin-bottom: 20px;
 }
 
@@ -192,11 +213,11 @@ textarea:focus, input:focus, select:focus {
     margin-bottom: 50px;
 }
 
-.footer-mobile h4{
+.footer-mobile h4, .footer-desktop h4{
     margin-bottom: 10px;
 }
 
-.footer-mobile span{
+.footer-mobile span, .footer-desktop span{
     font-size: 14px;
     line-height: 19px;
     text-align: center;
@@ -220,13 +241,17 @@ textarea:focus, input:focus, select:focus {
     margin-bottom: 30px;
 }
 
+.social-media-box{
+    margin-bottom: 20px;
+}
+
 .security-imgs{
     gap: 15px;
 }
 
 .receive-news{
     background: var(--button);
-    padding: 0 20px 20px;
+    padding: 20px;
 }
 
 .title-receive-news{
@@ -286,6 +311,55 @@ textarea:focus, input:focus, select:focus {
     opacity: 0.8;
 }
 
+.header-desktop{
+    display: none;
+    padding: 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.links-header-desktop{
+    display: flex;
+    align-items: center;
+    width: 440px;
+    justify-content: space-between;
+}
+
+.links-header-desktop a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links-desktop{
+    height: 50px;
+    background: var(--button);
+    padding: 0 40px;
+
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links-desktop a {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.footer-desktop {
+    display: none;
+}
+
+.left-infos-footer{
+    align-items: center;
+}
+
+
+
 @keyframes sidebar-open {
     from {
        left: -100%;
@@ -297,7 +371,7 @@ textarea:focus, input:focus, select:focus {
 
 @media screen and (min-width: 769px) {
     .receive-news{
-        padding: 0 40px 20px;
+        padding: 20px 40px;
     }
 
     .receive-news{
@@ -312,6 +386,44 @@ textarea:focus, input:focus, select:focus {
     }
 
     .input-receive-news{
+        flex-direction: row;
+    }
+
+    .header-mobile{
+        display: none;
+    }
+
+    .header-desktop{
+        display: flex;
+    }
+
+    .links-desktop {
+        display: flex;
+    }
+
+    .footer-mobile{
+        display: none;
+    }
+
+    .footer-desktop{
+        display: flex;
+    }
+
+    .page-about{
+        align-items: flex-start;
+    }
+
+    .desktop-security-pay{
+        margin: 0 20px 0 20px;
+    }
+
+    .social-media-box{
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .header-desktop{
         flex-direction: row;
     }
 }
