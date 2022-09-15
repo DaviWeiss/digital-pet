@@ -1,0 +1,58 @@
+:root {
+    --background: #F4F0EB;
+    --text: #151616;
+    --link: #797575;
+    --white: #fff;
+    --button: #893B67;
+}
+
+.about{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box-about-us{
+    min-height: 310px;
+    max-width: 1120px;
+    background: #F3DAB4;
+    border-radius: 40px;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.box-about-us p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.box-about-us p a{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 481px) {
+    .about{
+        padding: 40px;
+    }
+    
+    .box-about-us{
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about{
+        gap: 200px;
+        margin-bottom: 160px;
+    }
+}

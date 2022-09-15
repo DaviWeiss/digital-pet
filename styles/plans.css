@@ -1,0 +1,80 @@
+:root {
+    --background: #F4F0EB;
+    --text: #151616;
+    --link: #797575;
+    --white: #fff;
+    --button: #893B67;
+}
+
+.plans-cards{
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plans-cards h1{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+}
+
+.container-cards{
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-card{
+    min-height: 420px;
+    max-width: 350px;
+    background: #F3DAB4;
+    border-radius: 40px;
+    padding: 0 20px 20px 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.box-card h3{
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 37px;
+    text-align: center;
+}
+
+.box-card ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.box-card ul li{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.box-card button{
+    border: none;
+    background: var(--button);
+    height: 55px;
+    width: 100;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: var(--white);
+    min-width: 200px;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .plans-cards{
+        gap: 200px;
+        margin-bottom: 160px;
+    }
+    .container-cards{
+        flex-direction: row;
+    }
+}
