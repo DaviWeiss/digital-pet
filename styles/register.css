@@ -6,8 +6,9 @@
     --button: #893B67;
 }
 
-.header-login{
+.header-cadastro{
     background: #FAF0E2;
+    text-align: center;
 }
 
 main{
@@ -16,18 +17,6 @@ main{
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
-}
-
-.box-login-image > img{
-    display: none;
-}
-
-.box-form-login{
-    background: #F3DAB4;
-    max-width: 440px;
-    padding: 20px;
-    margin-top: 40px;
-    border-radius: 40px;
 }
 
 label{
@@ -56,26 +45,6 @@ input::placeholder{
     color: #000000;
 }
 
-a{
-    cursor: pointer;
-    text-decoration: underline;
-
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-
-    color: #000000;
-    transition: filter 0.8s;
-}
-
-a:hover{
-    opacity: 0.7;
-}
-
-.link-forget{
-    margin-bottom: 20px;
-}
-
 button[type=submit]{
     background: var(--background);
     border: 1px solid #000000;
@@ -99,26 +68,9 @@ button[type=submit]:hover{
     filter: brightness(0.8);
 }
 
-h3{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-    text-align: center;
-
-    color: #000000;
-
-    margin-bottom: 20px;
-}
-
 .row{
     align-items: center;
     justify-content: center;
-}
-
-button {
-    height: 50px;
-    cursor: pointer;
 }
 
 .buttons-login button:first-of-type{

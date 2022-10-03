@@ -23,13 +23,13 @@
     <main>
         <div class="box-login-image">
             <div class="box-form-login">
-                <form method="post" class="plans-cards column">
+                <form method="post" class="column">
                     <label for="email">E-mail</label>
-                    <input name="email" id="email" placeholder="Digite seu e-mail">
-
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                    <span id="errors-email"></span>
                     <label for="password">Senha</label>
-                    <input name="password" id="password" placeholder="Digite sua senha">
-
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                    <span id="errors-password"></span>
                     <a class="link-forget">Esqueci minha senha</a>
 
                     <button type="submit">Entrar</button>
@@ -50,7 +50,7 @@
                     </button>
                 </div>
                 <div class="link-account row">
-                    <a>Não tem uma conta? Crie uma agora</a>
+                    <a href="./register.html">Não tem uma conta? Crie uma agora</a>
                 </div>
 
                 
@@ -60,5 +60,6 @@
     </main>
 
     <script src="/scripts/global.js"></script>
+    <script src="/scripts/login.js"></script>
 </body>
 </html>

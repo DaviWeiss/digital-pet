@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/global.css" rel="stylesheet" type="text/css">
+    <link href="/styles/register.css" rel="stylesheet" type="text/css">
+    <title>Cadastro/Login Digital Pet</title>
+</head>
+<body>
+    <header>
+        <section class="header-cadastro">
+            <a href="./home.html">
+                <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
+            </a>
+        </section>
+    </header>
+
+    <main>
+            <form method="post" class="column">
+                <label for="email">E-mail*</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                <span id="errors-email"></span>
+
+                <label for="name">Nome*</label>
+                <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                <span id="errors-name"></span>
+
+                <label for="last-name">Sobrenome</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Digite seu sobrenome">
+                <span id="errors-last-name"></span>
+
+                <label for="CPF">CPF*</label>
+                <input type="CPF" name="CPF" id="CPF" placeholder="Digite seu CPF">
+                <span id="errors-CPF"></span>
+
+                <label for="celular">Celular*</label>
+                <input type="tel" name="celular" id="celular" placeholder="Digite seu celular">
+                <span id="errors-celular"></span>
+
+                <label for="password">Crie uma senha</label>
+                <input type="password" name="password" id="password" placeholder="Crie sua senha">
+                <span id="errors-password"></span>
+
+                <label for="confirm-password">Confirme a sua senha</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirme a sua senha">
+                <span id="errors-confirm-password"></span>
+
+                <button type="submit">Criar conta</button>
+                <button>Voltar</button>
+                
+                <p class="info">
+                    Ao criar uma conta, você concorda com os Termos e Condições de Uso da Petlove. Para saber como tratamos os seus dados pessoais, acesse o nosso Aviso de Privacidade.
+                </p>
+            </form>
+    </main>
+
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/register.js"></script>
+</body>
+</html>
