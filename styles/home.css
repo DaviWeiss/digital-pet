@@ -7,7 +7,6 @@
 }
 
 .banner-carrosel{
-    background: url('/images/home/banner-carrosel.svg');
     background-repeat: no-repeat;
     height: 37.5vw;
     background-position: center;
@@ -19,6 +18,18 @@
     padding: 0px 10px;
 }
 
+#banner-1{
+    background-image: url('/images/home/banner-carrosel.svg');
+}
+
+#banner-2{
+    background-image: url('/images/products/new/product-6.svg');
+}
+
+#banner-3{
+    background-image: url('/images/products/new/product-7.svg');
+}
+
 .banner-carrosel a {
     display: contents;
 }
@@ -26,6 +37,34 @@
 .banner-carrosel img {
     width: 5%;
     max-width: 40px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.mySlides {
+    display: none
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 .cards-infos{
@@ -93,6 +132,12 @@
     border-radius: 30px;
     background: var(--white);
     padding: 0 10px 30px 10px;
+    transition: filter 0.8s;
+    cursor: pointer;
+}
+
+.box-products:hover{
+    filter: brightness(0.9);
 }
 
 .box-products img{

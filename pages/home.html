@@ -35,7 +35,7 @@
                     <img src="/images/header/icone-pedidos.svg" alt="Ícone meus pedidos">
                     Meus pedidos
                 </a>
-                <a href="#">
+                <a href="./login.html">
                     Entrar | Cadastrar
                     <img src="/images/header/icone-entrar-desktop.svg" alt="Ícone entrar desktop">
                 </a>
@@ -55,7 +55,7 @@
                     </div>
                     <ul class="menu">
                         <li class="menu-item">
-                            <a href="" class="menu-link">
+                            <a href="./login.html" class="menu-link">
                                 <img src="/images/header/icone-entrar-mobile.svg">
                                 Entrar/Cadastrar
                             </a>
@@ -103,14 +103,35 @@
             <a href="#">Outlet</a>
         </section>
         <section class="banners">
-            <div class="banner-carrosel">
-                <a href="#">
+            <div class="banner-carrosel mySlides fade" id="banner-1">
+                <a onclick="plusSlides(-1)">
                     <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
                 </a>
-                <a href="#">
+                <a onclick="plusSlides(1)">
                     <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
                 </a>
             </div>
+            <div class="banner-carrosel mySlides fade" id="banner-2">
+                <a onclick="plusSlides(-1)">
+                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
+                </a>
+                <a onclick="plusSlides(1)">
+                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
+                </a>
+            </div>
+            <div class="banner-carrosel mySlides fade" id="banner-3">
+                <a onclick="plusSlides(-1)">
+                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
+                </a>
+                <a onclick="plusSlides(1)">
+                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
+                </a>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+              </div>
         </section>
 
         <section class="cards-infos">
@@ -222,8 +243,8 @@
                 <span>Receba novidades e promoções</span>
             </div>
             <div class="input-receive-news">
-                <input type="text" placeholder="Seu nome">
-                <input type="text" placeholder="Seu e-mail">
+                <input type="text" placeholder="Seu nome" id="news-nome">
+                <input type="text" placeholder="Seu nome" id="news-email">
                 <button type="button">Eu quero</button>
             </div>
         </section>
@@ -343,5 +364,6 @@
         </section>
     </footer>
     <script src="/scripts/global.js"></script>
+    <script src="/scripts/home.js"></script>
 </body>
 </html>

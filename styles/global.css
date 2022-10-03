@@ -25,6 +25,20 @@ a{
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    transition: filter 0.8s;
+}
+
+a img{
+    transition: filter 0.8s;
+    cursor: pointer;
+}
+
+a:hover{
+    filter: brightness(0.4);
+}
+
+a img:hover{
+    filter: brightness(0.6); 
 }
 
 ul {
@@ -304,11 +318,16 @@ textarea:focus, input:focus, select:focus {
 
     color: var(--button);
 
-    transition: all .2s;
+    transition: all .8s;
+    cursor: pointer;
 }
 
 .input-receive-news button:active{
-    opacity: 0.8;
+    filter: brightness(0.8);
+}
+
+.input-receive-news button:hover{
+    filter: brightness(0.8);
 }
 
 .header-desktop{

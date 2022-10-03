@@ -1,0 +1,177 @@
+:root {
+    --background: #F4F0EB;
+    --text: #151616;
+    --link: #797575;
+    --white: #fff;
+    --button: #893B67;
+}
+
+.header-login{
+    background: #FAF0E2;
+}
+
+main{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.box-login-image > img{
+    display: none;
+}
+
+.box-form-login{
+    background: #F3DAB4;
+    max-width: 440px;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 40px;
+}
+
+label{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    border: none;
+}
+
+input::placeholder{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #000000;
+    transition: filter 0.8s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.link-forget{
+    margin-bottom: 20px;
+}
+
+button[type=submit]{
+    background: var(--background);
+    border: 1px solid #000000;
+
+    height: 50px;
+    transition: filter 0.8s;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #000000;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+button[type=submit]:hover{
+    filter: brightness(0.8);
+}
+
+h3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+
+    color: #000000;
+
+    margin-bottom: 20px;
+}
+
+.row{
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    height: 50px;
+    cursor: pointer;
+}
+
+.buttons-login button:first-of-type{
+    background-color: #FFFFFF;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.buttons-login button:first-of-type span{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #000000;
+}
+
+.buttons-login button:last-of-type{
+    background-color: #3D5A98;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.buttons-login button:last-of-type span{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+}
+
+.buttons-login button{
+    transition: filter 0.8s;
+}
+
+.buttons-login button:hover{
+    filter: brightness(0.8);
+}
+
+.link-account{
+    justify-content: center;
+}
+
+@media screen and (min-width: 1280px) {
+    .box-login-image{
+        display: flex;
+        max-width: 1120px;
+        background: #F3DAB4;
+        align-items: flex-end;
+        margin-top: 60px;
+        border-radius: 40px;
+    }
+
+    .box-login-image > img{
+        display: block;
+    }
+}
