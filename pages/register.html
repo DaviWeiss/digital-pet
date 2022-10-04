@@ -18,42 +18,52 @@
     </header>
 
     <main>
+        <div class="box-form">
             <form method="post" class="column">
                 <label for="email">E-mail*</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
-                <span id="errors-email"></span>
+                <input type="text" name="email" id="email" placeholder="Digite seu e-mail">
+                <span id="errors-email" class="error"></span>
 
                 <label for="name">Nome*</label>
                 <input type="text" name="name" id="name" placeholder="Digite seu nome">
-                <span id="errors-name"></span>
+                <span id="errors-name" class="error"></span>
 
-                <label for="last-name">Sobrenome</label>
+                <label for="last-name">Sobrenome*</label>
                 <input type="text" name="last-name" id="last-name" placeholder="Digite seu sobrenome">
-                <span id="errors-last-name"></span>
+                <span id="errors-last-name" class="error"></span>
 
                 <label for="CPF">CPF*</label>
                 <input type="CPF" name="CPF" id="CPF" placeholder="Digite seu CPF">
-                <span id="errors-CPF"></span>
+                <span id="errors-CPF" class="error"></span>
 
                 <label for="celular">Celular*</label>
                 <input type="tel" name="celular" id="celular" placeholder="Digite seu celular">
-                <span id="errors-celular"></span>
+                <span id="errors-celular" class="error"></span>
 
                 <label for="password">Crie uma senha</label>
                 <input type="password" name="password" id="password" placeholder="Crie sua senha">
-                <span id="errors-password"></span>
+                <div id="errors-password">
+                    <span id="erros-password-span">A senha deve conter:</span>
+                    <ul>
+                        <li>8 caracteres no mínimo;</li>
+                        <li>1 Letra Maiúscula no mínimo;</li>
+                        <li>1 Número no mínimo;</li>
+                        <li>1 Símbolo no mínimo: $*&@#"</li>
+                    </ul>
+                </div>
 
                 <label for="confirm-password">Confirme a sua senha</label>
                 <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirme a sua senha">
-                <span id="errors-confirm-password"></span>
+                <span id="errors-confirm-password" class="error"></span>
 
                 <button type="submit">Criar conta</button>
-                <button>Voltar</button>
+                <button class="btn-go-back">Voltar</button>
                 
                 <p class="info">
                     Ao criar uma conta, você concorda com os Termos e Condições de Uso da Petlove. Para saber como tratamos os seus dados pessoais, acesse o nosso Aviso de Privacidade.
                 </p>
             </form>
+        </div>
     </main>
 
     <script src="/scripts/global.js"></script>

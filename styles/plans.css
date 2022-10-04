@@ -67,6 +67,13 @@
     color: var(--white);
     min-width: 200px;
     max-width: 100%;
+    cursor: pointer;
+
+    transition: filter 0.8s;
+}
+
+.box-card button:hover{
+    filter: brightness(0.8);
 }
 
 @media screen and (min-width: 1024px) {
