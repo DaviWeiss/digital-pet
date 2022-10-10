@@ -144,6 +144,10 @@
     border-radius: 30px;
 }
 
+.box-products img:hover{
+    filter: brightness(1);
+}
+
 .box-products p{
     font-weight: 600;
     font-size: 20px;

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles/global.css" rel="stylesheet" type="text/css">
-    <link href="/styles/home.css" rel="stylesheet" type="text/css">
+    <link href="/styles/carrinho.css" rel="stylesheet" type="text/css">
     <title>Digital Pet</title>
 </head>
 <body>
@@ -13,97 +13,51 @@
         <div class="shipping">
             <span>Frete grátis para todo o Brasil</span>
         </div>
-        <section class="header-mobile">
-            <div class="row box-logo-mobile">
-                <a onclick="toggleMenu()">
-                    <img src="/images/header/burguer-menu.svg" alt="Burguer menu">
-                </a>
-                <a href="./home.html">
-                    <img src="/images/header/logo-mobile.svg" alt="Logo digital pet">
-                </a>
-                <img src="/images/header/icone-carrinho-mobile.svg" alt="Imagem carrinho">
-            </div>
-            <input type="text" placeholder="O que você precisa?">
-        </section>
-        <section class="header-desktop">
+        <section class="header-login">
             <a href="./home.html">
                 <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
             </a>
-            <input type="text" placeholder="O que você precisa?">
-            <div class="links-header-desktop">
-                <a href="#">
-                    <img src="/images/header/icone-pedidos.svg" alt="Ícone meus pedidos">
-                    Meus pedidos
-                </a>
-                <a href="#">
-                    Entrar | Cadastrar
-                    <img src="/images/header/icone-entrar-desktop.svg" alt="Ícone entrar desktop">
-                </a>
-            </div>
         </section>
     </header>
+
     <main>
-        <div class="lista-links-mobile">
-            <nav class="sidebar">
-                <div class="items">
-                    <div class="topo-sidebar">
-                        <h3>Olá, Bem-Vindo (a)</h3>
-                        <a onclick="toggleMenu()">
-                            <img src="/images/header/icone-fechar-menu-mobile.svg" alt="Ícone fechar sidebar">
-                        </a>
-                    </div>
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <img src="/images/header/icone-entrar-mobile.svg">
-                                Entrar/Cadastrar
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <img src="/images/header/icone-meu-perfil.svg">
-                                Meu Perfil
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <img src="/images/header/icone-carrinho-mobile.svg">
-                                Carrinho
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <img src="/images/header/icone-seu-pet.svg">
-                                Seu Pet
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="./plans.html" class="menu-link">
-                                <img src="/images/header/icone-planos.svg">
-                                Planos DigitalPet
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="" class="menu-link">
-                                <img src="/images/header/icone-atendimento.svg">
-                                Atendimento
-                            </a>
-                        </li>
-                    </ul>
+        <section class="pedidos">
+            <div class="row space">
+                <span>Produtos (01)</span>
+                <a href="./home.html">Editar carrinho</a>
+            </div>
+
+            <div class="row detalhe-produto space">
+                <img src="./../images/products/popular/product-1.svg" alt="Imagem do produto a comprar">
+                <div class="column">
+                    <strong>Ração Premier Pet Raças Específicas Shih Tzu Filhote</strong>
+                    <span>1 unidade</span>
                 </div>
-            </nav>
-        </div>
-        <section class="links-desktop">
-            <a href="#">Cachorro</a>
-            <a href="#">Gato</a>
-            <a href="#">Outros pets</a>
-            <a href="#">Marcas</a>
-            <a href="#">Saúde</a>
-            <a href="#">Outlet</a>
-        </section>
-        <section class="about carrinho">
-            <h1>Carrinho</h1>
-            <img>
+                <strong>R$ 95,90</strong>
+            </div>
+
+            <div class="row space desconto">
+                <input type="text" placeholder="Cupom de desconto">
+                <button>Aplicar</button>
+            </div>
+
+            <div class="row space">
+                <span>Subtotal</span>
+                <span>R$ 95,90</span>
+            </div>
+            <div class="row space">
+                <span>Frete</span>
+                <span>--</span>
+            </div>
+            <div class="row space">
+                <strong>Total</strong>
+                <strong>R$ 95,90</strong>
+            </div>
+            <div class="box-btn">
+                <button class="button-final">Finalizar compra</button>
+            </div>
         </section>
     </main>
+    <script src="/scripts/carrinho.js"></script>
 </body>
+</html>

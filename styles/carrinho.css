@@ -1,0 +1,142 @@
+.pedidos {
+    background-color: #F3DAB4;
+    margin: 40px 20px 0 20px;
+    border-radius: 30px;
+    padding: 40px 20px 40px 20px;
+}
+
+.pedidos span, strong{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+strong{
+    font-weight: bold;
+}
+
+.pedidos a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration-line: underline;
+}
+
+.pedidos row{
+    align-items: center;
+}
+
+.detalhe-produto {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detalhe-produto img{
+    width: 100px;
+}
+
+.detalhe-produto strong, .detalhe-produto span{
+    font-size: 16px;
+}
+
+.desconto{
+    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.desconto input {
+    padding: 15px 20px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    border: none;
+    height: 50px;
+}
+
+.desconto input::placeholder{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.desconto button{
+    height: 50px;
+    min-width: 100px;
+    background-color: #893B67;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 27px;
+    border: none;
+    transition: filter .8s;
+    cursor: pointer;
+}
+
+.desconto button:hover{
+    filter: brightness(0.8);
+}
+
+.box-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.button-final{
+    height: 50px;
+    max-width: 300px;
+    background-color: #893B67;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 27px;
+    border: none;
+    transition: filter .8s;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.button-final:hover{
+    filter: brightness(0.8);
+}
+
+@media screen and (min-width: 451px){
+    .detalhe-produto {
+        flex-direction: row;
+    }
+
+    .detalhe-produto strong{
+        max-width: 160px;
+    }
+
+    .desconto{
+        flex-direction: row;
+        gap: 0px;
+    }
+    .desconto input{
+        max-width: 250px;
+    }
+}
+
+@media screen and (min-width: 769px){
+    .pedidos {
+        margin: 40px;
+    }
+
+    .detalhe-produto img{
+        width: 120px;
+    }
+    
+    .detalhe-produto strong{
+        max-width: unset;
+    }
+
+    .desconto input{
+        max-width: unset;
+    }
+}
