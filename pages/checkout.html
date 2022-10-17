@@ -1,11 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles/global.css" rel="stylesheet" type="text/css">
-    <title>Checkout Identificação</title>
-
+    <link href="/styles/checkout.css" rel="stylesheet" type="text/css">
+    <title>Checkout | Digital Pet</title>
 </head>
+
+<body>
+    <header>
+        <section class="header">
+            <a href="./home.html">
+                <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
+            </a>
+        </section>
+    </header>
+
+    <main>
+        <div class="box-form" id="box-form-data">
+            <h3>DADOS PESSOAIS</h3>
+            <a href="./login.html" class="has-account">Já tem uma conta? <span>Fazer o login.</span></a>
+            <form method="post" class="column">
+                <label for="email">Digite o seu e-mail*</label>
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <span id="errors-email" class="error"></span>
+
+                <label for="cpf">Digite o seu CPF*</label>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF">
+                <span id="errors-cpf" class="error"></span>
+
+                <label for="name">Digite o seu nome*</label>
+                <input type="text" name="name" id="name" placeholder="Nome">
+                <span id="errors-name" class="error"></span>
+
+                <label for="lastName">Digite o seu sobrenome*</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Sobrenome">
+                <span id="errors-lastName" class="error"></span>
+
+                <label for="cel">Digite o seu telefone com DDD*</label>
+                <input type="tel" name="cel" id="cel" placeholder="Telefone com DDD">
+                <span id="errors-cel" class="error"></span>
+
+                <button type="button" id="button-form-data">Ir para endereço</button>
+            </form>    
+        </div>
+
+        <div class="box-form box-form-end" id="box-form-end">
+            <h3>ENDEREÇO DE ENTREGA</h3>
+            <span class="info">Por hora, estamos entregando apenas para São Paulo (SP)</span>
+            <form method="post" class="column">
+                <label for="cep">Digite o seu CEP*</label>
+                <input type="text" name="cep" id="cep" placeholder="CEP">
+                <span id="errors-cep" class="error"></span>
+
+                <label for="bairro">Digite o seu bairro*</label>
+                <input type="text" name="bairro" id="bairro" placeholder="Bairro">
+                <span id="errors-bairro" class="error"></span>
+
+                <label for="end">Digite o seu endereço*</label>
+                <input type="text" name="end" id="end" placeholder="Endereço">
+                <span id="errors-end" class="error"></span>
+
+                <label for="num">Digite o número*</label>
+                <input type="text" name="num" id="num" placeholder="Número">
+                <span id="errors-num" class="error"></span>
+
+                <label for="comp">Digite o complemento (opcional)</label>
+                <input type="text" name="comp" id="comp" placeholder="Complemento">
+
+                <button type="button" id="button-form-end">Ir para pagamento</button>
+            </form>    
+        </div>
+
+        <div class="box-form box-form-pay" id="box-form-pay">
+            <h3>PAGAMENTO</h3>
+            <span class="info">Por hora, estamos aceitando apenas pagagmentos fetios por cartão</span>
+            <form method="post" class="column" id="form-card">
+                <label for="card-name">Nome do portador (como gravado no cartão)*</label>
+                <input type="text" name="card-name" id="card-name" placeholder="Nome">
+                <span id="errors-card-name" class="error"></span>
+
+                <label for="card-num">Número do cartão*</label>
+                <input type="text" name="card-num" id="card-num" placeholder="Número">
+                <span id="errors-card-num" class="error"></span>
+
+                <label for="card-valid">Validade (MM/AAAA)*</label>
+                <input type="text" name="card-valid" id="card-valid" placeholder="Validade">
+                <span id="errors-card-valid" class="error"></span>
+
+                <label for="cvv">CVV*</label>
+                <input type="text" name="cvv" id="cvv" placeholder="CVV">
+                <span id="errors-cvv" class="error"></span>
+
+                <label for="card-cpf">CPF do portador*</label>
+                <input type="text" name="card-cpf" id="card-cpf" placeholder="CPF do portador">
+                <span id="errors-card-cpf" class="error"></span>
+
+                <label for="card-bir-date">Data de nascimento do portador*</label>
+                <input type="text" name="card-bir-date" id="card-bir-date" placeholder="DD/MM/AAAA">
+                <span id="errors-card-bir-date" class="error"></span>
+
+                <label for="card-cel">Telefone do portador*</label>
+                <input type="tel" name="card-cel" id="card-cel" placeholder="Telefone do portador*">
+                <span id="errors-card-cel" class="error"></span>
+
+                <button type="submit">Finalizar compra</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="../scripts/checkout.js"></script>
+</body>
 </html>

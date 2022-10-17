@@ -66,12 +66,19 @@ function validityNameAndLastName(){
 function validityCPF(){
     const cpf = document.getElementById('CPF');
     const errosCPF = document.getElementById('errors-CPF');
+    const rejexCpf = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/;
     
     if(cpf.value == ""){
         cpf.style.border = "1px solid red";
+        errosCPF.style.display = "unset";
         errosCPF.innerText = "O campo CPF não pode ser vazio";
+    }else if(!rejexCpf.test(cpf.value)){
+        cpf.style.border = "1px solid red";
+        errosCPF.style.display = "unset";
+        errosCPF.innerText = "O CPF inserido é inválido";
     }else {
         cpf.style.border = "none";
+        errosCPF.style.display = "none";
         errosCPF.innerText = "";
     }
 }
