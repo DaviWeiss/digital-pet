@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/global.css" rel="stylesheet" type="text/css">
+    <link href="/styles/account.css" rel="stylesheet" type="text/css">
+    <title>Minha Conta | Digital Pet</title>
+</head>
+
+<body>
+    <header>
+        <section class="header">
+            <a href="./home.html">
+                <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
+            </a>
+        </section>
+    </header>
+
+    <main>
+        <a href="./pedidos.html">Ir para Pedidos</a>
+        <div class="box-form" id="box-form-data">
+            <h3>MINHA CONTA</h3>
+            <form method="post" class="column">
+                <label for="email">Endereço de e-mail*</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" value="teste@email.com">
+                <span id="errors-email" class="error"></span>
+
+                <label for="name">Nome*</label>
+                <input type="text" name="name" id="name" placeholder="Nome" value="João">
+                <span id="errors-name" class="error"></span>
+
+                <label for="lastName">Sobrenome*</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Sobrenome" value="Pereira">
+                <span id="errors-lastName" class="error"></span>
+
+                <label for="cel">Número*</label>
+                <input type="tel" name="cel" id="cel" placeholder="Telefone com DDD" value="(11) 94546-8976">
+                <span id="errors-cel" class="error"></span>
+
+                <label for="password">Crie uma nova senha caso deseje</label>
+                <input type="password" name="password" id="password" placeholder="Crie sua nova senha">
+                <div id="errors-password" class="error">
+                    <span id="erros-password-span">A senha deve conter:</span>
+                    <ul>
+                        <li>8 caracteres no mínimo;</li>
+                        <li>1 Letra Maiúscula no mínimo;</li>
+                        <li>1 Número no mínimo;</li>
+                        <li>1 Símbolo no mínimo: $*&@#"</li>
+                    </ul>
+                </div>
+
+                <label for="confirm-password">Confirme a sua nova senha:</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirme a sua nova senha">
+                <span id="errors-confirm-password" class="error"></span>
+
+                <button type="submit">Salvar alterações</button>
+            </form>    
+        </div>
+
+    </main>
+
+    <script src="../scripts/account.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+.header{
+    background: #F3DAB4;
+}
+
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-form{
+    margin-top: 40px;
+    padding: 20px;
+    max-width: 768px;
+    background: #F3DAB4;
+    width: 100%;
+    border-radius: 40px;
+    justify-content: center;
+}
+
+.box-form-end, .box-form-pay{
+    display: none;
+    animation-duration: 1s;
+    position: relative;
+}
+
+.show-form-end {
+    display: unset;
+    animation-name: show-form-end;
+    animation-duration: 3s;
+}
+  
+@keyframes show-form-end {
+    0% {
+        left: -50%;
+        top: -600px;
+        opacity: 0;
+    }
+    
+    25%{
+        opacity: 0.25; 
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        left: 0%;
+        top: 0px;
+        opacity: 1; 
+    }
+}
+
+.show-form-pay {
+    display: unset;
+    animation-name: show-form-pay;
+    animation-duration: 3s;
+}
+  
+@keyframes show-form-pay {
+    0% {
+        right: -50%;
+        top: -600px;
+        opacity: 0;
+    }
+    
+    25%{
+        opacity: 0.25; 
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        right: 0%;
+        top: 0px;
+        opacity: 1; 
+    }
+}
+
+h3{
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 37px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.has-account{
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+label{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    border: none;
+    width: 100%;
+}
+
+input::placeholder{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+}
+
+button{
+    background: var(--button);
+    border: 1px solid #000000;
+
+    height: 50px;
+    transition: filter 0.8s;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+button:hover{
+    filter: brightness(0.8);
+}
+
+.info{
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    
+    color: #000000;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.error {
+    display: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+a{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 769px) {
+    main{
+        padding: 40px;
+    }
+
+    .box-form{
+        padding: 40px;
+    }
+}

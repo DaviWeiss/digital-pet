@@ -1,0 +1,42 @@
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box-card{
+    min-width: 250px;
+    background: #F3DAB4;
+    border-radius: 12px;
+    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.box-card h3{
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 37px;
+    text-align: center;
+}
+
+.box-card ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+.box-card ul li{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
