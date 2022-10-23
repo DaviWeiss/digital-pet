@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/stylesheets/global.css" rel="stylesheet" type="text/css">
-    <link href="/stylesheets/home.css" rel="stylesheet" type="text/css">
-    <title>Digital Pet</title>
+    <link href="/stylesheets/contact-about.css" rel="stylesheet" type="text/css">
+    <title>Sobre nós | Digital Pet</title>
 </head>
 <body>
     <header>
@@ -18,26 +18,26 @@
                 <a onclick="toggleMenu()">
                     <img src="/images/header/burguer-menu.svg" alt="Burguer menu">
                 </a>
-                <a href="./home.html">
+                <a href="./home.ejs">
                     <img src="/images/header/logo-mobile.svg" alt="Logo digital pet">
                 </a>
-                <a href="./carrinho.html">
+                                <a href="./carrinho.ejs">
                     <img src="/images/header/icone-carrinho-mobile.svg" alt="Imagem carrinho">
                 </a>
             </div>
             <input type="text" placeholder="O que você precisa?">
         </section>
         <section class="header-desktop">
-            <a href="./home.html">
+            <a href="./home.ejs">
                 <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
             </a>
             <input type="text" placeholder="O que você precisa?">
             <div class="links-header-desktop">
-                <a href="./account.html">
+                <a href="./account.ejs">
                     <img src="/images/header/icone-pedidos.svg" alt="Ícone minha conta">
                     Minha conta
                 </a>
-                <a href="./login.html">
+                <a href="./login.ejs">
                     Entrar | Cadastrar
                     <img src="/images/header/icone-entrar-desktop.svg" alt="Ícone entrar desktop">
                 </a>
@@ -57,19 +57,19 @@
                     </div>
                     <ul class="menu">
                         <li class="menu-item">
-                            <a href="./login.html" class="menu-link">
+                            <a href="./login.ejs" class="menu-link">
                                 <img src="/images/header/icone-entrar-mobile.svg">
                                 Entrar/Cadastrar
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="./account.html" class="menu-link">
+                            <a href="./account.ejs" class="menu-link">
                                 <img src="/images/header/icone-meu-perfil.svg">
                                 Minha Conta
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="./carrinho.html" class="menu-link">
+                            <a href="./carrinho.ejs" class="menu-link">
                                 <img src="/images/header/icone-carrinho-mobile.svg">
                                 Carrinho
                             </a>
@@ -81,7 +81,7 @@
                             </a>
                         </li>-->
                         <li class="menu-item">
-                            <a href="./plans.html" class="menu-link">
+                            <a href="./plans.ejs" class="menu-link">
                                 <img src="/images/header/icone-planos.svg">
                                 Planos DigitalPet
                             </a>
@@ -97,145 +97,28 @@
             </nav>
         </div>
         <section class="links-desktop">
-            <a href="./products-list.html">Cachorro</a>
-            <a href="./products-list.html">Gato</a>
-            <a href="./products-list.html">Outros pets</a>
-            <a href="./products-list.html">Marcas</a>
-            <a href="./products-list.html">Saúde</a>
-            <a href="./products-list.html">Outlet</a>
-        </section>
-        <section class="banners">
-            <div class="banner-carrosel mySlides fade" id="banner-1">
-                <a onclick="plusSlides(-1)">
-                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
-                </a>
-                <a onclick="plusSlides(1)">
-                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
-                </a>
-            </div>
-            <div class="banner-carrosel mySlides fade" id="banner-2">
-                <a onclick="plusSlides(-1)">
-                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
-                </a>
-                <a onclick="plusSlides(1)">
-                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
-                </a>
-            </div>
-            <div class="banner-carrosel mySlides fade" id="banner-3">
-                <a onclick="plusSlides(-1)">
-                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
-                </a>
-                <a onclick="plusSlides(1)">
-                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
-                </a>
-            </div>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-              </div>
+            <a href="./products-list.ejs">Cachorro</a>
+            <a href="./products-list.ejs">Gato</a>
+            <a href="./products-list.ejs">Outros pets</a>
+            <a href="./products-list.ejs">Marcas</a>
+            <a href="./products-list.ejs">Saúde</a>
+            <a href="./products-list.ejs">Outlet</a>
         </section>
 
-        <section class="cards-infos">
-            <div class="box-card">
-                <img src="/images/home/icone-relogio.svg" alt="Ícone relógio do card receba em horas na home">
-                <span>Receba em Horas</span>
-            </div>
-            <div class="box-card">
-                <img src="/images/home/icone-frete-gratis.svg" alt="Ícone caminhão do card frete grátis na home">
-                <span>Frete Grátis Brasil</span>
-            </div>
-            <div class="box-card">
-                <img src="/images/home/icone-cartao.svg" alt="Ícone cartão do card 3x sem juros">
-                <span>Até 3x Sem Juros</span>
-            </div>
-            <div class="box-card">
-                <img src="/images/home/icone-frete-gratis.svg" alt="Ícone patinha de cachorro do card 10% off para vips">
-                <span>10% Off para Vips</span>
-            </div>
-        </section>
+        <section class="about column">
+            <h1>Sobre nós</h1>
+            
+            <div class="box-about-us">
+                <p>
+                A DigitalPet é um e-commerce criado por estudantes da DigitalHouse, com o objetivo principal de facilitar a vida de pais de pet. 
+                Para atingir esse objetivo, os estudantes decidiram criar um sistema de planos com diversas vantagens para os assinantes. 
+                Esses planos são divididos em mensal, semestral e anual. Caso queira saber mais sobre, <a href="#">clique aqui.</a></p>
 
-        <section class="products">
-            <h2>Produtos Populares</h2>
-            <div class="content-products column">
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/popular/product-1.svg" alt="Produto">
-                    <p>Ração Premier Raças Específicas Shih Tzu para Cães Filhotes</p>
-                    <strong>R$ 95,90</strong>
-                    <span>5x de R$ 19,18 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/popular/product-2.svg" alt="Produto">
-                    <p>Ração Úmida Pedigree Sachê Carne ao Molho para Cães Adultos de Raças Pequenas 100 g</p>
-                    <strong>R$ 2,89</strong>
-                    <span>1x de R$ 2,89 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/popular/product-3.svg" alt="Produto">
-                    <p>Areia Sanitária Baw Waw Beauty Pet para Gatos 4 kg</p>
-                    <strong>R$ 8,99</strong>
-                    <span>1x de R$ 8,99 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/popular/product-4.svg" alt="Produto">
-                    <p>Petisco Pedigree Dentastix Cuidado Oral Para Cães Adultos Raças Grandes 7 Unidades</p>
-                    <strong>R$ 25,40</strong>
-                    <span>2x de R$ 12,70 sem juros no cartão de crédito</span>
-                </a>
-            </div>
-            <h2>Novidades</h2>
-            <div class="content-products column">
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-5.svg" alt="Produto">
-                    <p>Arranhador Hello Pet Rampa Branca para Gatos</p>
-                    <strong>R$ 219,99</strong>
-                    <span>5x de R$ 43,99 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-6.svg" alt="Produto">
-                    <p>Casa Furacão para Cães Preta</p>
-                    <strong>R$ 54,99</strong>
-                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-7.svg" alt="Produto">
-                    <p>Shampoo Dermatológico Sebolytic SIS para Cães 250ml</p>
-                    <strong>R$ 235,99</strong>
-                    <span>5x de R$ 47,19 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-8.svg" alt="Produto">
-                    <p>Arranhador Hello Pet Sisal e Pelúcia Bege com Mola para Gatos</p>
-                    <strong>R$ 54,99</strong>
-                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
-                </a>
-            </div>
-            <h2>Outros Produtos</h2>
-            <div class="content-products column">
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-5.svg" alt="Produto">
-                    <p>Arranhador Hello Pet Rampa Branca para Gatos</p>
-                    <strong>R$ 219,99</strong>
-                    <span>5x de R$ 43,99 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-6.svg" alt="Produto">
-                    <p>Casa Furacão para Cães Preta</p>
-                    <strong>R$ 54,99</strong>
-                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-7.svg" alt="Produto">
-                    <p>Shampoo Dermatológico Sebolytic SIS para Cães 250ml</p>
-                    <strong>R$ 235,99</strong>
-                    <span>5x de R$ 47,19 sem juros no cartão de crédito</span>
-                </a>
-                <a href="./product-detail.html" class="box-products column">
-                    <img src="/images/products/new/product-8.svg" alt="Produto">
-                    <p>Arranhador Hello Pet Sisal e Pelúcia Bege com Mola para Gatos</p>
-                    <strong>R$ 54,99</strong>
-                    <span>2x de R$ 27,50 sem juros no cartão de crédito</span>
-                </a>
+                <p>Além dos planos, a DigitalPet possui um e-commerce repleto de produtos e que são entregues por todo o Brasil. 
+                    Caso queira entrar em contato conosco, basta enviar um e-mail para: <a href="#">contato@digitalpet.com.</a></p>
+
+                <p>Ou se preferir você pode nos mandar uma mensagem no whatsapp, <a href="#">clicando aqui</a> ou nos procurar em uma das nossas redes sociais.
+                </p>
             </div>
         </section>
 
@@ -254,7 +137,7 @@
 
     <footer>
         <section class="footer-mobile">
-            <a href="./home.html">
+            <a href="./home.ejs">
                 <img class="logo" src="/images/header/logo-mobile.svg" alt="Logo digital pet">
             </a>
             <div class="contacts column">
@@ -264,10 +147,10 @@
                 <span>Segunda a Sábado das 10h-17h</span>
             </div>
             <div class="page-about">
-                <a href="./contact-about.html">
+                <a href="./contact-about.ejs">
                     <span>Sobre nós</span>
                 </a>
-                <a href="./contact-about.html">
+                <a href="./contact-about.ejs">
                     <span>Contato</span>
                 </a>
             </div>
@@ -308,7 +191,7 @@
         <section class="footer-desktop">
             <div class="row">
                 <div class="column left-infos-footer">
-                    <a href="./home.html">
+                    <a href="./home.ejs">
                         <img class="logo" src="/images/header/logo-mobile.svg" alt="Logo digital pet">
                     </a>
                     <div class="contacts column">
@@ -325,10 +208,10 @@
                 </div>
 
                 <div class="page-about">
-                    <a href="./contact-about.html">
+                    <a href="./contact-about.ejs">
                         <span>Sobre nós</span>
                     </a>
-                    <a href="./contact-about.html">
+                    <a href="./contact-about.ejs">
                         <span>Contato</span>
                     </a>
                 </div>
@@ -365,7 +248,7 @@
 
         </section>
     </footer>
+
     <script src="/javascripts/global.js"></script>
-    <script src="/javascripts/home.js"></script>
 </body>
 </html>

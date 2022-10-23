@@ -12,7 +12,7 @@ window.addEventListener('load', ()=>{
     })
 
     btnBack.addEventListener('click', ()=>{
-        location.href ="./../pages/login.html";
+        location.href ="./../pages/login.ejs";
     })
 })
 
