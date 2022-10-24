@@ -1,0 +1,80 @@
+[
+    {
+        "image": "/images/products/popular/product-1.svg", 
+        "name": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes",
+        "value": "R$ 95,90",
+        "description": "5x de R$ 19,18 sem juros no cartão de crédito",
+        "type": "popular"
+    },
+    {
+        "image": "/images/products/popular/product-2.svg", 
+        "name": "Ração Úmida Pedigree Sachê Carne ao Molho para Cães Adultos de Raças Pequenas 100 g",
+        "value": "R$ 2,89",
+        "description": "1x de R$ 2,89 sem juros no cartão de crédito",
+        "type": "popular"
+    },
+    {
+        "image": "/images/products/popular/product-3.svg", 
+        "name": "Areia Sanitária Baw Waw Beauty Pet para Gatos 4 kg",
+        "value": "R$ 8,99",
+        "description": "1x de R$ 8,99 sem juros no cartão de crédito",
+        "type": "popular"
+    },
+    {
+        "image": "/images/products/popular/product-4.svg", 
+        "name": "Petisco Pedigree Dentastix Cuidado Oral Para Cães Adultos Raças Grandes 7 Unidades",
+        "value": "R$ 25,40",
+        "description": "2x de R$ 12,70 sem juros no cartão de crédito",
+        "type": "popular"
+    },
+    {
+        "image": "/images/products/new/product-5.svg", 
+        "name": "Arranhador Hello Pet Rampa Branca para Gatos",
+        "value": "R$ 219,99",
+        "description": "5x de R$ 43,99 sem juros no cartão de crédito",
+        "type": "new"
+    },    {
+        "image": "/images/products/new/product-6.svg", 
+        "name": "Casa Furacão para Cães Preta",
+        "value": "R$ 54,99",
+        "description": "2x de R$ 27,50 sem juros no cartão de crédito",
+        "type": "new"
+    },    {
+        "image": "/images/products/new/product-7.svg", 
+        "name": "Shampoo Dermatológico Sebolytic SIS para Cães 250ml",
+        "value": "R$ 235,99",
+        "description": "5x de R$ 47,19 sem juros no cartão de crédito",
+        "type": "new"
+    },    {
+        "image": "/images/products/new/product-8.svg", 
+        "name": "Arranhador Hello Pet Sisal e Pelúcia Bege com Mola para Gatos",
+        "value": "R$ 54,99",
+        "description": "2x de R$ 27,50 sem juros no cartão de crédito",
+        "type": "new"
+    },
+    {
+        "image": "/images/products/new/product-5.svg", 
+        "name": "Arranhador Hello Pet Rampa Branca para Gatos",
+        "value": "R$ 219,99",
+        "description": "5x de R$ 43,99 sem juros no cartão de crédito",
+        "type": "other"
+    },    {
+        "image": "/images/products/new/product-6.svg", 
+        "name": "Casa Furacão para Cães Preta",
+        "value": "R$ 54,99",
+        "description": "2x de R$ 27,50 sem juros no cartão de crédito",
+        "type": "other"
+    },    {
+        "image": "/images/products/new/product-7.svg", 
+        "name": "Shampoo Dermatológico Sebolytic SIS para Cães 250ml",
+        "value": "R$ 235,99",
+        "description": "5x de R$ 47,19 sem juros no cartão de crédito",
+        "type": "other"
+    },    {
+        "image": "/images/products/new/product-8.svg", 
+        "name": "Arranhador Hello Pet Sisal e Pelúcia Bege com Mola para Gatos",
+        "value": "R$ 54,99",
+        "description": "2x de R$ 27,50 sem juros no cartão de crédito",
+        "type": "other"
+    }
+]

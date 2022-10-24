@@ -38,7 +38,7 @@ formCard.addEventListener('submit', (event)=>{
     validityCardBirDate()
     validityCardCel()
     if(validityCardName() && validityCardNum() && validityCardValid() && validityCardCvv() && validityCardCpf() && validityCardBirDate() && validityCardCel()){
-        window.location.href = "./final.ejs";
+        window.location.href = "/final";
     }
 })
 
