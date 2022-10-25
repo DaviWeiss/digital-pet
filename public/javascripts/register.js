@@ -3,7 +3,6 @@ window.addEventListener('load', ()=>{
     const form  = document.querySelector('form');
 
     form.addEventListener('submit',  (event)=>{
-        event.preventDefault();
         validityEmail();
         validityNameAndLastName();
         validityCPF();
@@ -35,10 +34,10 @@ function validityEmail(){
 
 function validityNameAndLastName(){
     const name = document.getElementById('name');
-    const lastName = document.getElementById('last-name');
+    const lastName = document.getElementById('lastName');
 
     const errosName = document.getElementById('errors-name');
-    const errosLastName = document.getElementById('errors-last-name');
+    const errosLastName = document.getElementById('errors-lastName');
 
     if(name.value == ""){
         name.style.border = "1px solid red";

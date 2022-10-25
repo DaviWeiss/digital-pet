@@ -15,7 +15,7 @@ var pedidosRouter = require('./routes/pedidos');
 var plansRouter = require('./routes/plans');
 var productDetailRouter = require('./routes/product-detail');
 var productsListRouter = require('./routes/products-list');
-var registerouter = require('./routes/register');
+var registerRouter = require('./routes/register');
 
 var app = express();
 
@@ -40,7 +40,7 @@ app.use('/pedidos', pedidosRouter);
 app.use('/planos', plansRouter);
 app.use('/detalhe-produto', productDetailRouter);
 app.use('/lista-produtos', productsListRouter);
-app.use('/registro', registerouter);
+app.use('/registro', registerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

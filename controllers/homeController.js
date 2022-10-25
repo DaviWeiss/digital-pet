@@ -1,7 +1,7 @@
 const ProductModel = require("../models/Product");
 
-async function renderHomeView(req, res, next) {
-	const productList = await ProductModel.getProducts();
+function renderHomeView(req, res, next) {
+	const productList = ProductModel.getProducts();
 	res.render("home", { productList });
 }
 
