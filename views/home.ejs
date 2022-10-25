@@ -156,24 +156,51 @@
         </section>
 
         <section class="products">
-            <% for (let product of productList) {%>
-                <% if (product.type == "new") {%>
-                    <h2>Produtos Populares</h2>
-                <% } else if (product.type == "popular") { %>
-                    <h2>Novidades</h2>
-                <% } else { %>
-                    <h2>Outros Produtos</h2>
+            <h2>Produtos Populares</h2>
+            <div class="content-products column">
+                <% for (let product of productList) {%>
+                    <% if (product.type == "other") {%>
+                        <a href="/detalhe-produto" class="box-products column">
+                            <img src="<%=product.image%>" alt="Produto">
+                            <p><%=product.name%></p>
+                            <strong><%=product.value%></strong>
+                            <span><%=product.description%></span>
+                        </a>
+                    <% } %>
                 <% } %>
-                <div class="content-products column">
-                    <a href="/detalhe-produto" class="box-products column">
-                        <img src="<%=product.image%>" alt="Produto">
-                        <p><%=product.name%></p>
-                        <strong><%=product.value%></strong>
-                        <span><%=product.description%></span>
-                    </a>
-                </div>
-            <% } %>
+            </div>
         </section>
+        <section class="products">
+            <h2>Novidades</h2>
+            <div class="content-products column">
+                <% for (let product of productList) {%>
+                    <% if (product.type == "other") {%>
+                        <a href="/detalhe-produto" class="box-products column">
+                            <img src="<%=product.image%>" alt="Produto">
+                            <p><%=product.name%></p>
+                            <strong><%=product.value%></strong>
+                            <span><%=product.description%></span>
+                        </a>
+                    <% } %>
+                <% } %>
+            </div>
+        </section>
+        <section class="products">
+            <h2>Outros Produtos</h2>
+            <div class="content-products column">
+                <% for (let product of productList) {%>
+                    <% if (product.type == "other") {%>
+                        <a href="/detalhe-produto" class="box-products column">
+                            <img src="<%=product.image%>" alt="Produto">
+                            <p><%=product.name%></p>
+                            <strong><%=product.value%></strong>
+                            <span><%=product.description%></span>
+                        </a>
+                    <% } %>
+                <% } %>
+            </div>
+        </section>
+
 
         <section class="receive-news">
             <div class="title-receive-news">
