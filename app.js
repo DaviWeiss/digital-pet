@@ -1,23 +1,40 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require("method-override");
+const multer = require("multer");
 
-var accountRouter = require('./routes/account');
-var carrinhoRouter = require('./routes/carrinho');
-var checkoutRouter = require('./routes/checkout');
-var contactAboutRouter = require('./routes/contact-about');
-var finalRouter = require('./routes/final');
-var homeRouter = require('./routes/home');
-var loginRouter = require('./routes/login');
-var pedidosRouter = require('./routes/pedidos');
-var plansRouter = require('./routes/plans');
-var productDetailRouter = require('./routes/product-detail');
-var productsListRouter = require('./routes/products-list');
-var registerRouter = require('./routes/register');
+const accountRouter = require('./routes/account');
+const carrinhoRouter = require('./routes/carrinho');
+const checkoutRouter = require('./routes/checkout');
+const contactAboutRouter = require('./routes/contact-about');
+const finalRouter = require('./routes/final');
+const homeRouter = require('./routes/home');
+const loginRouter = require('./routes/login');
+const pedidosRouter = require('./routes/pedidos');
+const plansRouter = require('./routes/plans');
+const productDetailRouter = require('./routes/product-detail');
+const productsListRouter = require('./routes/products-list');
+const registerRouter = require('./routes/register');
 
-var app = express();
+const storage = multer.diskStorage({
+  destination: function(req, file, cb)
+  {
+    cb(null, "public/images");
+  },
+  filename: function(req, file, cb)
+  {
+    cb(null, "nome-" + Date.now());
+  },
+});
+
+const upload = multer({
+  storage: storage
+});
+
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,6 +45,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride("_method"));
 
 app.use('/minha-conta', accountRouter);
 app.use('/carrinho', carrinhoRouter);
