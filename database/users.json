@@ -1,0 +1,12 @@
+[
+ {
+  "id": 1,
+  "email": "baptistaweiss@gmail.com",
+  "name": "DAVI",
+  "lastName": "WEISS",
+  "CPF": "42769080865",
+  "celular": "11944451805",
+  "password": "$2b$10$2DhUQOHDXMnu71NHMpgLBOZBdH.8SamB7E2DRBCfTNLcpV3.2p55e",
+  "confirmPassword": "$2b$10$rDk4od.84ycwEqxYKv623OV1zwMyXfpqaIOMvssrAapGOr1T8LePW"
+ }
+]

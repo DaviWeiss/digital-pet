@@ -88,8 +88,8 @@ function validityPassword(){
         errosPassword.style.display = "none";
     }
 
-    const confirmPassword = document.getElementById('confirm-password');
-    const errosConfirmPassword = document.getElementById('errors-confirm-password');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const errosConfirmPassword = document.getElementById('errors-confirmPassword');
 
     if(confirmPassword.value == ""){
         confirmPassword.style.border = "1px solid red";

@@ -108,6 +108,10 @@ textarea:focus, input:focus, select:focus {
     font-weight: bold;
 }
 
+.border-error{
+    border: 1px solid red;
+}
+
 .header-mobile{
     padding: 20px;
     background: #FAF0E2;

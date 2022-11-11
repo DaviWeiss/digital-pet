@@ -1,37 +1,65 @@
+const { create } = require("domain");
 const fs = require("fs");
+const fileName = "database/users.json";
 
-function User(name, endName, cpf, cel, password){
-    this.name = name;
-    this.endName = endName;
-    this.cpf = cpf;
-    this.cel = cel;
-    this.password = password;
+const User = {
+    getUsers: function() {
+        return userList = JSON.parse(fs.readFileSync(fileName, "utf-8"));
+    },
+
+    getUserById: function(id) {
+        let userList = this.getUsers();
+        let userFound = userList.find(user => user.id === id);
+        return userFound;
+    },
+
+    getUserByField: function(field, value){
+        let userList = this.getUsers();
+        let userFound = userList.find(user => user[field] === value);
+        return userFound;
+    },
+
+    editUser: function(id, newData){
+        let userList = this.getUsers();
+        let userIndex = userList.findIndex(user => user.id === id);
+        let userFound = userList.find(user => user.id === id);
+        userList[userIndex] = 
+        {
+            id:userFound.id, 
+            ...newData
+        };
+        
+        fs.writeFileSync(fileName, JSON.stringify(userList, null, ' '));
+    },
+
+    generateId: function(){
+        let userList = this.getUsers();
+        let lastUser = userList.pop();
+
+        if (lastUser){
+            return lastUser.id + 1;
+        }
+
+        return 1;
+    },
+
+    createUser: function(data){
+        let userList = this.getUsers();
+        let newUser = {
+            id: this.generateId(),
+            ...data
+        }
+
+        userList.push(newUser);
+
+        fs.writeFileSync(fileName, JSON.stringify(userList, null, ' '));
+    },
+
+    deleteUser: function(id){
+        let userList = this.getUsers();
+        let newUserList = userList.filter(user => user.id != id);
+        fs.writeFileSync(fileName, JSON.stringify(newUserList, null, ' '));
+    }
 }
 
-function getUsers(){
-    const userList = JSON.parse(fs.readFileSync("database/user.json", "utf-8"));
-    return userList.map(
-        user =>
-        new User
-        (
-            user.name,
-            user.endName,
-            user.cpf,
-            user.cel,
-            user.password
-        )
-    )
-}
-
-function createUser(name, endName, cpf, cel, password){
-    const newUser = new User(name, endName, cpf, cel, password);
-    const userList = getUsers();
-    console.log(newUser)
-    userList.push(newUser);
-    fs.writeFileSync("database/user.json", JSON.stringify(userList));
-}
-
-module.exports = {
-    getUsers,
-    createUser
-}
+module.exports = User;
