@@ -22,21 +22,21 @@
         <a href="/pedidos">Ir para Pedidos</a>
         <div class="box-form" id="box-form-data">
             <h3>MINHA CONTA</h3>
-            <form method="post" class="column">
+            <form method="POST" class="column" action="/usuario/<%= locals.user.id %>/editar/?_method=PUT">
                 <label for="email">Endereço de e-mail*</label>
-                <input type="email" name="email" id="email" placeholder="E-mail" value="teste@email.com">
+                <input type="email" name="email" id="email" placeholder="E-mail" value="<%= locals.user.email %>">
                 <span id="errors-email" class="error"></span>
 
                 <label for="name">Nome*</label>
-                <input type="text" name="name" id="name" placeholder="Nome" value="João">
+                <input type="text" name="name" id="name" placeholder="Nome" value="<%= locals.user.name %>">
                 <span id="errors-name" class="error"></span>
 
                 <label for="lastName">Sobrenome*</label>
-                <input type="text" name="lastName" id="lastName" placeholder="Sobrenome" value="Pereira">
+                <input type="text" name="lastName" id="lastName" placeholder="Sobrenome" value="<%= locals.user.lastname %>">
                 <span id="errors-lastName" class="error"></span>
 
                 <label for="cel">Número*</label>
-                <input type="tel" name="cel" id="cel" placeholder="Telefone com DDD" value="(11) 94546-8976">
+                <input type="tel" name="cel" id="cel" placeholder="Telefone com DDD" value="<%= locals.user.celular %>">
                 <span id="errors-cel" class="error"></span>
 
                 <label for="password">Crie uma nova senha caso deseje</label>
@@ -51,16 +51,18 @@
                     </ul>
                 </div>
 
-                <label for="confirmPassword">Confirme a sua nova senha:</label>
+                <label for="confirmPassword">Confirme a sua nova senha</label>
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme a sua nova senha">
                 <span id="errors-confirmPassword" class="error"></span>
 
                 <button type="submit">Salvar alterações</button>
+
+                <button type="button" id="btn-go-back" class="btn-go-back">Sair da conta</button>
             </form>    
         </div>
 
     </main>
 
-    <script src="javascripts/account.js"></script>
+    <script src="/javascripts/account.js"></script>
 </body>
 </html>

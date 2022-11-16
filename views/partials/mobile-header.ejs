@@ -1,0 +1,54 @@
+<div class="lista-links-mobile">
+    <nav class="sidebar">
+        <div class="items">
+            <div class="topo-sidebar">
+                <h3>Olá, Bem-Vindo (a) <%= locals.user ? locals.user.name : null %></h3>
+                <a onclick="toggleMenu()">
+                    <img src="/images/header/icone-fechar-menu-mobile.svg" alt="Ícone fechar sidebar">
+                </a>
+            </div>
+            <ul class="menu">
+                <% if(locals.user) { %>
+                    <li class="menu-item">
+                        <a href="/usuario/minha-conta" class="menu-link">
+                            <img src="/images/header/icone-meu-perfil.svg">
+                            Minha Conta
+                        </a>
+                    </li>
+                <% } else { %>
+                    <li class="menu-item">
+                        <a href="/usuario/login" class="menu-link">
+                            <img src="/images/header/icone-entrar-mobile.svg">
+                            Entrar/Cadastrar
+                        </a>
+                    </li>
+                <% } %>
+
+                <li class="menu-item">
+                    <a href="/carrinho" class="menu-link">
+                        <img src="/images/header/icone-carrinho-mobile.svg">
+                        Carrinho
+                    </a>
+                </li>
+                <!--<li class="menu-item">
+                    <a href="" class="menu-link">
+                        <img src="/images/header/icone-seu-pet.svg">
+                        Seu Pet
+                    </a>
+                </li>-->
+                <li class="menu-item">
+                    <a href="/planos" class="menu-link">
+                        <img src="/images/header/icone-planos.svg">
+                        Planos DigitalPet
+                    </a>
+                </li>
+                <!--<li class="menu-item">
+                    <a href="" class="menu-link">
+                        <img src="/images/header/icone-atendimento.svg">
+                        Atendimento
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </nav>
+</div>

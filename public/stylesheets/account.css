@@ -141,6 +141,22 @@ button{
     cursor: pointer;
 }
 
+.btn-go-back{
+    background: var(--background);
+    border: 1px solid #000000;
+
+    height: 50px;
+    transition: filter 0.8s;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+
+    cursor: pointer;
+    margin-top: 20px;
+}
+
 button:hover{
     filter: brightness(0.8);
 }

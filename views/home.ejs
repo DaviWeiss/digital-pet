@@ -9,158 +9,19 @@
     <title>Digital Pet</title>
 </head>
 <body>
-    <header>
-        <div class="shipping">
-            <span>Frete grátis para todo o Brasil</span>
-        </div>
-        <section class="header-mobile">
-            <div class="row box-logo-mobile">
-                <a onclick="toggleMenu()">
-                    <img src="/images/header/burguer-menu.svg" alt="Burguer menu">
-                </a>
-                <a href="/">
-                    <img src="/images/header/logo-mobile.svg" alt="Logo digital pet">
-                </a>
-                <a href="/carrinho">
-                    <img src="/images/header/icone-carrinho-mobile.svg" alt="Imagem carrinho">
-                </a>
-            </div>
-            <input type="text" placeholder="O que você precisa?">
-        </section>
-        <section class="header-desktop">
-            <a href="/">
-                <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
-            </a>
-            <input type="text" placeholder="O que você precisa?">
-            <div class="links-header-desktop">
-                <a href="/minha-conta">
-                    <img src="/images/header/icone-pedidos.svg" alt="Ícone minha conta">
-                    Minha conta
-                </a>
-                <a href="/usuario/login">
-                    Entrar | Cadastrar
-                    <img src="/images/header/icone-entrar-desktop.svg" alt="Ícone entrar desktop">
-                </a>
-            </div>
-        </section>
-    </header>
-
+    <%- include('./partials/header.ejs') %>
     <main>
-        <div class="lista-links-mobile">
-            <nav class="sidebar">
-                <div class="items">
-                    <div class="topo-sidebar">
-                        <h3>Olá, Bem-Vindo (a)</h3>
-                        <a onclick="toggleMenu()">
-                            <img src="/images/header/icone-fechar-menu-mobile.svg" alt="Ícone fechar sidebar">
-                        </a>
-                    </div>
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a href="/usuario/login" class="menu-link">
-                                <img src="/images/header/icone-entrar-mobile.svg">
-                                Entrar/Cadastrar
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/minha-conta" class="menu-link">
-                                <img src="/images/header/icone-meu-perfil.svg">
-                                Minha Conta
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="/carrinho" class="menu-link">
-                                <img src="/images/header/icone-carrinho-mobile.svg">
-                                Carrinho
-                            </a>
-                        </li>
-                        <!--<li class="menu-item">
-                            <a href="" class="menu-link">
-                                <img src="/images/header/icone-seu-pet.svg">
-                                Seu Pet
-                            </a>
-                        </li>-->
-                        <li class="menu-item">
-                            <a href="/planos" class="menu-link">
-                                <img src="/images/header/icone-planos.svg">
-                                Planos DigitalPet
-                            </a>
-                        </li>
-                        <!--<li class="menu-item">
-                            <a href="" class="menu-link">
-                                <img src="/images/header/icone-atendimento.svg">
-                                Atendimento
-                            </a>
-                        </li>-->
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <section class="links-desktop">
-            <a href="/lista-produtos">Cachorro</a>
-            <a href="/lista-produtos">Gato</a>
-            <a href="/lista-produtos">Outros pets</a>
-            <a href="/lista-produtos">Marcas</a>
-            <a href="/lista-produtos">Saúde</a>
-            <a href="/lista-produtos">Outlet</a>
-        </section>
-        <section class="banners">
-            <div class="banner-carrosel mySlides fade" id="banner-1">
-                <a onclick="plusSlides(-1)">
-                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
-                </a>
-                <a onclick="plusSlides(1)">
-                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
-                </a>
-            </div>
-            <div class="banner-carrosel mySlides fade" id="banner-2">
-                <a onclick="plusSlides(-1)">
-                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
-                </a>
-                <a onclick="plusSlides(1)">
-                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
-                </a>
-            </div>
-            <div class="banner-carrosel mySlides fade" id="banner-3">
-                <a onclick="plusSlides(-1)">
-                    <img src="/images/home/flecha-esquerda-banner.svg" alt="Flecha esquerda carrosel">
-                </a>
-                <a onclick="plusSlides(1)">
-                    <img src="/images/home/flecha-direita-banner.svg" alt="Flecha direita carrosel">
-                </a>
-            </div>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-              </div>
-        </section>
-
-        <section class="cards-infos">
-            <div class="box-card">
-                <img src="/images/home/icone-relogio.svg" alt="Ícone relógio do card receba em horas na home">
-                <span>Receba em Horas</span>
-            </div>
-            <div class="box-card">
-                <img src="/images/home/icone-frete-gratis.svg" alt="Ícone caminhão do card frete grátis na home">
-                <span>Frete Grátis Brasil</span>
-            </div>
-            <div class="box-card">
-                <img src="/images/home/icone-cartao.svg" alt="Ícone cartão do card 3x sem juros">
-                <span>Até 3x Sem Juros</span>
-            </div>
-            <div class="box-card">
-                <img src="/images/home/icone-frete-gratis.svg" alt="Ícone patinha de cachorro do card 10% off para vips">
-                <span>10% Off para Vips</span>
-            </div>
-        </section>
+        <%- include('./partials/mobile-header.ejs') %>
+        <%- include('./partials/links-desktop.ejs') %>
+        <%- include('./partials/cards-info.ejs') %>
+        <%- include('./partials/banner.ejs') %>
 
         <section class="products">
             <h2>Produtos Populares</h2>
             <div class="content-products column">
                 <% for (let product of productList) {%>
-                    <% if (product.type == "other") {%>
-                        <a href="/detalhe-produto" class="box-products column">
+                    <% if (product.type == "popular") {%>
+                        <a href="/produtos/<%= product.id %>/detalhe" class="box-products column">
                             <img src="<%=product.image%>" alt="Produto">
                             <p><%=product.name%></p>
                             <strong><%=product.value%></strong>
@@ -174,8 +35,8 @@
             <h2>Novidades</h2>
             <div class="content-products column">
                 <% for (let product of productList) {%>
-                    <% if (product.type == "other") {%>
-                        <a href="/detalhe-produto" class="box-products column">
+                    <% if (product.type == "new") {%>
+                        <a href="/produtos/<%= product.id %>/detalhe" class="box-products column">
                             <img src="<%=product.image%>" alt="Produto">
                             <p><%=product.name%></p>
                             <strong><%=product.value%></strong>
@@ -190,7 +51,7 @@
             <div class="content-products column">
                 <% for (let product of productList) {%>
                     <% if (product.type == "other") {%>
-                        <a href="/detalhe-produto" class="box-products column">
+                        <a href="/produtos/<%= product.id %>/detalhe" class="box-products column">
                             <img src="<%=product.image%>" alt="Produto">
                             <p><%=product.name%></p>
                             <strong><%=product.value%></strong>
@@ -201,132 +62,11 @@
             </div>
         </section>
 
-        <section class="receive-news">
-            <div class="title-receive-news">
-                <img src="/images/others/email.svg" alt="Icone email para receber novidades">
-                <span>Receba novidades e promoções</span>
-            </div>
-            <div class="input-receive-news">
-                <input type="text" placeholder="Seu nome" id="news-nome">
-                <input type="text" placeholder="Seu nome" id="news-email">
-                <button type="button">Eu quero</button>
-            </div>
-        </section>
+        <%- include('./partials/receive-news.ejs') %>
+
     </main>
 
-    <footer>
-        <section class="footer-mobile">
-            <a href="/">
-                <img class="logo" src="/images/header/logo-mobile.svg" alt="Logo digital pet">
-            </a>
-            <div class="contacts column">
-                <h4 class="text bold">Central de atendimento</h4>
-                <span>(xx) x xxxx-xxxx</span>
-                <span>contato@digitalpet.com</span>
-                <span>Segunda a Sábado das 10h-17h</span>
-            </div>
-            <div class="page-about">
-                <a href="/contato-sobre-nos">
-                    <span>Sobre nós</span>
-                </a>
-                <a href="/contato-sobre-nos">
-                    <span>Contato</span>
-                </a>
-            </div>
-
-            <div class="column social-media-box">
-                <h4 class="text bold">Redes sociais</h4>
-                <div class="row">
-                    <img src="/images/footer/icone-instagram.svg" alt="Ícone instagram">
-                    <img src="/images/footer/icone-facebook.svg" alt="Ícone facebook">
-                    <img src="/images/footer/icone-twitter.svg" alt="Ícone twitter">
-                </div>
-            </div>
-
-            <div class="box-payment column">
-                <h4 class="text bold">Formas de pagamento</h4>
-                <img src="/images/footer/payment-options-1.svg" alt="Forma de pagamento (Bandeiras)">
-                <img src="/images/footer/payment-options-2.svg" alt="Forma de pagamento (Bandeiras)">
-            </div>
-
-            
-            <div class="box-security column align-center">
-                <h4 class="text bold">Segurança</h4>
-                <div class="row security-imgs">
-                    <img src="/images/footer/security-google.svg" alt="Selo de Segurança Google">
-                    <img src="/images/footer/security-site.svg" alt="Selo de Segurança Site">
-                </div>
-            </div>
-
-            <div class="column">
-                <span>Digital Pet Comércio de Produtos para Animais S.A</span>
-                <span>CNPJ: xx.xxx.xxx/xxxx-xx</span>
-                <span>Av. Norte xxxx, Recife - PE, 52.051-000, Brasil</span>
-            </div>
-        </section>
-
-
-
-        <section class="footer-desktop">
-            <div class="row">
-                <div class="column left-infos-footer">
-                    <a href="/">
-                        <img class="logo" src="/images/header/logo-mobile.svg" alt="Logo digital pet">
-                    </a>
-                    <div class="contacts column">
-                        <h4 class="text bold">Central de atendimento</h4>
-                        <span>(xx) x xxxx-xxxx</span>
-                        <span>contato@digitalpet.com</span>
-                        <span>Segunda a Sábado das 10h-17h</span>
-                    </div>
-                    <div class="column left">
-                        <span>Digital Pet Comércio de Produtos para Animais S.A</span>
-                        <span>CNPJ: xx.xxx.xxx/xxxx-xx</span>
-                        <span>Av. Norte xxxx, Recife - PE, 52.051-000, Brasil</span>
-                    </div>
-                </div>
-
-                <div class="page-about">
-                    <a href="/contato-sobre-nos">
-                        <span>Sobre nós</span>
-                    </a>
-                    <a href="/contato-sobre-nos">
-                        <span>Contato</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-
-                <div class="column desktop-security-pay">
-                    <div class="box-payment column">
-                        <h4 class="text bold">Formas de pagamento</h4>
-                        <img src="/images/footer/payment-options-1.svg" alt="Forma de pagamento (Bandeiras)">
-                        <img src="/images/footer/payment-options-2.svg" alt="Forma de pagamento (Bandeiras)">
-                    </div>
-        
-                    
-                    <div class="box-security column">
-                        <h4 class="text bold">Segurança</h4>
-                        <div class="row security-imgs">
-                            <img src="/images/footer/security-google.svg" alt="Selo de Segurança Google">
-                            <img src="/images/footer/security-site.svg" alt="Selo de Segurança Site">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <h4 class="text bold">Redes sociais</h4>
-                    <div class="row">
-                        <img src="/images/footer/icone-instagram.svg" alt="Ícone instagram">
-                        <img src="/images/footer/icone-facebook.svg" alt="Ícone facebook">
-                        <img src="/images/footer/icone-twitter.svg" alt="Ícone twitter">
-                    </div>
-                </div>
-            </div>
-
-        </section>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
     <script src="/javascripts/global.js"></script>
     <script src="/javascripts/home.js"></script>
 </body>

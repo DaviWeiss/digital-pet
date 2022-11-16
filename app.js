@@ -5,9 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require("method-override");
 const multer = require("multer");
+const session = require('express-session');
 
 const othersRouter = require('./routes/otherRoutes');
 const userRouter = require('./routes/user');
+const productsRouter = require('./routes/product');
+
+const loggedUserDataMiddleware = require('./middlewares/loggedUserDataMiddleware');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb)
@@ -26,6 +30,12 @@ const upload = multer({
 
 const app = express();
 
+app.use(session({
+  secret: "DigitalPet",
+  resave: false,
+  saveUninitialized: false
+}))
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -37,8 +47,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 
+app.use(loggedUserDataMiddleware);
+
 app.use('/', othersRouter);
 app.use('/usuario', userRouter);
+app.use('/produtos', productsRouter);
 
 
 // catch 404 and forward to error handler

@@ -23,13 +23,25 @@
     <main>
         <div class="box-login-image">
             <div class="box-form-login">
-                <form method="POST" class="column">
+                <form method="POST" class="column" action="/usuario/login">
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
-                    <span id="errors-email"></span>
+                    <span id="errors-email" class="error"></span>
+                    <% if(locals.errors && errors.email) { %>
+                        <span class="error"><%= errors.email.msg %></span>
+                    <% } %>
                     <label for="password">Senha</label>
                     <input type="password" name="password" id="password" placeholder="Digite sua senha">
-                    <span id="errors-password"></span>
+                    <span id="errors-password" class="error"></span>
+                    <% if(locals.errors && errors.password) { %>
+                        <span class="error"><%= errors.password.msg %></span>
+                    <% } %>
+                    <label class="container">Lembrar meu usuário
+                        <input type="checkbox" name="rememberUser" id="rememberUser">
+                        <span class="checkmark"></span>
+                    </label>
+                      
+                    
                     <a class="link-forget">Esqueci minha senha</a>
 
                     <button type="submit">Entrar</button>

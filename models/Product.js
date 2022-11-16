@@ -8,9 +8,7 @@ const Product = {
     },
     getProductById: function(id){
         let productList = this.getProducts();
-        let productFound = productList.find(product =>{
-            product.id === id
-        });
+        let productFound = productList.find(product => product.id === id);
 
         return productFound;
     },

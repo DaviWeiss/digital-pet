@@ -19,19 +19,6 @@ const User = {
         return userFound;
     },
 
-    editUser: function(id, newData){
-        let userList = this.getUsers();
-        let userIndex = userList.findIndex(user => user.id === id);
-        let userFound = userList.find(user => user.id === id);
-        userList[userIndex] = 
-        {
-            id:userFound.id, 
-            ...newData
-        };
-        
-        fs.writeFileSync(fileName, JSON.stringify(userList, null, ' '));
-    },
-
     generateId: function(){
         let userList = this.getUsers();
         let lastUser = userList.pop();
@@ -52,6 +39,20 @@ const User = {
 
         userList.push(newUser);
 
+        fs.writeFileSync(fileName, JSON.stringify(userList, null, ' '));
+    },
+
+    editUser: function(id, newData){
+        let userList = this.getUsers();
+        let userIndex = userList.findIndex(user => user.id === id);
+        let userFound = userList.find(user => user.id === id);
+        userList[userIndex] = 
+        {
+            id:userFound.id,
+            CPF: userFound.CPF,
+            ...newData
+        };
+        
         fs.writeFileSync(fileName, JSON.stringify(userList, null, ' '));
     },
 
