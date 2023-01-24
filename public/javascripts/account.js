@@ -133,11 +133,7 @@ confirmPassword.addEventListener('input', ()=>{
         errors[6] = 0;
     }  
     submitForm(errors);
-})
-
-btnBack.addEventListener('click', ()=>{
-    location.href ="/usuario/login";
-})
+});
 
 function submitForm(errors){
     let hasErrors = false;

@@ -1,6 +1,8 @@
 const UserModel = require("../models/User");
 const bcrypt = require("bcrypt");
-const {validationResult} = require('express-validator');
+const {validationResult} = require('express-validator')
+const jwt = require("jsonwebtoken")
+const {jwtKey} = require("../config/secrets");
 
 const userController = {
     renderAccountView: function(req, res){
@@ -69,11 +71,14 @@ const userController = {
             if(userToLogin){
                 let isPasswordVerified = bcrypt.compareSync(req.body.password, userToLogin.password);
                 if(isPasswordVerified){
+                    const email = req.body.email;
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
                     if(req.body.rememberUser){
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 30});
+                        res.cookie('userEmail', email, { maxAge: (1000 * 60) * 30});
                     }
+                    const token = jwt.sign({ email }, jwtKey, { expiresIn: "1h"});
+                    res.cookie("token", token);
                     return res.redirect("/usuario/minha-conta");
                 }
                 else{
@@ -127,6 +132,7 @@ const userController = {
 
     logOut: function(req, res){
         res.clearCookie('userEmail');
+        res.clearCookie('token');
         req.session.destroy();
         return res.redirect('/');
     }

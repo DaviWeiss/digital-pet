@@ -11,7 +11,7 @@ router.get('/login', loggedUserMiddleware, controller.renderLoginView);
 router.post('/login', validationsLogin, controller.processLogin);
 
 //Rotas de criar
-router.get('/criar', loggedUserMiddleware, controller.renderRegisterView);
+router.get('/criar', notLoggedUserMiddleware, controller.renderRegisterView);
 router.post('/criar', validationsRegister, controller.createUser);
 
 //Rota para conta
