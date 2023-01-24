@@ -19,29 +19,44 @@
 
     <main>
         <div class="box-form">
-            <form method="POST" class="column">
+            <form method="POST" class="column" action="/usuario/criar">
                 <label for="email">E-mail*</label>
-                <input type="text" name="email" id="email" placeholder="Digite seu e-mail">
+                <input value="<%= locals.oldData ? oldData.email : null%>" type="text" name="email" id="email" placeholder="Digite seu e-mail">
                 <span id="errors-email" class="error"></span>
+                <% if(locals.errors && errors.email) { %>
+                    <span class="error" id="error-email"><%= errors.email.msg %></span>
+                <% } %>    
 
                 <label for="name">Nome*</label>
-                <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                <input value="<%= locals.oldData ? oldData.name : null%>"  type="text" name="name" id="name" placeholder="Digite seu nome">
                 <span id="errors-name" class="error"></span>
+                <% if(locals.errors && errors.name) { %>
+                    <span class="error"><%= errors.name.msg %></span>
+                <% } %>    
 
                 <label for="lastName">Sobrenome*</label>
-                <input type="text" name="lastName" id="lastName" placeholder="Digite seu sobrenome">
+                <input value="<%= locals.oldData ? oldData.lastName : null%>"  type="text" name="lastName" id="lastName" placeholder="Digite seu sobrenome">
                 <span id="errors-lastName" class="error"></span>
+                <% if(locals.errors && errors.lastName) { %>
+                    <span class="error"><%= errors.lastName.msg %></span>
+                <% } %>
 
                 <label for="CPF">CPF*</label>
                 <input type="CPF" name="CPF" id="CPF" placeholder="Digite seu CPF">
                 <span id="errors-CPF" class="error"></span>
+                <% if(locals.errors && errors.CPF) { %>
+                    <span class="error"><%= errors.CPF.msg %></span>
+                <% } %>
 
                 <label for="celular">Celular*</label>
-                <input type="tel" name="celular" id="celular" placeholder="Digite seu celular">
+                <input value="<%= locals.oldData ? oldData.celular : null%>" type="tel" name="celular" id="celular" placeholder="Digite seu celular">
                 <span id="errors-celular" class="error"></span>
+                <% if(locals.errors && errors.celular) { %>
+                    <span class="error"><%= errors.celular.msg %></span>
+                <% } %>
 
-                <label for="password">Crie uma senha</label>
-                <input type="password" name="password" id="password" placeholder="Crie sua senha">
+                <label for="password">Crie uma senha*</label>
+                <input value="<%= locals.oldData ? oldData.password : null%>" type="password" name="password" id="password" placeholder="Crie sua senha">
                 <div id="errors-password">
                     <span id="erros-password-span">A senha deve conter:</span>
                     <ul>
@@ -51,10 +66,16 @@
                         <li>1 Símbolo no mínimo: $*&@#"</li>
                     </ul>
                 </div>
+                <% if(locals.errors && errors.password) { %>
+                    <span class="error"><%= errors.password.msg %></span>
+                <% } %>    
 
-                <label for="confirm-password">Confirme a sua senha</label>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirme a sua senha">
-                <span id="errors-confirm-password" class="error"></span>
+                <label for="confirmPassword">Confirme a sua senha*</label>
+                <input value="<%= locals.oldData ? oldData.confirmPassword : null%>" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme a sua senha">
+                <span id="errors-confirmPassword" class="error"></span>
+                <% if(locals.errors && errors.confirmPassword) { %>
+                    <span class="error"><%= errors.confirmPassword.msg %></span>
+                <% } %>
 
                 <button type="submit">Criar conta</button>
                 <button type="button" class="btn-go-back">Voltar</button>
@@ -68,5 +89,6 @@
 
     <script src="/javascripts/global.js"></script>
     <script src="/javascripts/register.js"></script>
+    
 </body>
 </html>

@@ -108,6 +108,10 @@ textarea:focus, input:focus, select:focus {
     font-weight: bold;
 }
 
+.border-error{
+    border: 1px solid red;
+}
+
 .header-mobile{
     padding: 20px;
     background: #FAF0E2;
@@ -339,13 +343,6 @@ textarea:focus, input:focus, select:focus {
     justify-content: space-between;
 }
 
-.links-header-desktop{
-    display: flex;
-    align-items: center;
-    width: 440px;
-    justify-content: space-between;
-}
-
 .links-header-desktop a{
     display: flex;
     align-items: center;
@@ -379,6 +376,65 @@ textarea:focus, input:focus, select:focus {
 
 .space{
     justify-content: space-between;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--background);
+}
+
+.container:hover input ~ .checkmark {
+    background-color: var(--background);
+    filter: brightness(0.7);
+}
+
+.container input:checked ~ .checkmark {
+    background-color: var(--button);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 @keyframes sidebar-open {

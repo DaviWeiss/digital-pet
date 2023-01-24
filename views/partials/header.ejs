@@ -1,0 +1,39 @@
+<header>
+    <div class="shipping">
+        <span>Frete grátis para todo o Brasil</span>
+    </div>
+    <section class="header-mobile">
+        <div class="row box-logo-mobile">
+            <a onclick="toggleMenu()">
+                <img src="/images/header/burguer-menu.svg" alt="Burguer menu">
+            </a>
+            <a href="/">
+                <img src="/images/header/logo-mobile.svg" alt="Logo digital pet">
+            </a>
+            <a href="/carrinho">
+                <img src="/images/header/icone-carrinho-mobile.svg" alt="Imagem carrinho">
+            </a>
+        </div>
+        <input type="text" placeholder="O que você precisa?">
+    </section>
+    <section class="header-desktop">
+        <a href="/">
+            <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
+        </a>
+        <input type="text" placeholder="O que você precisa?">
+        <div class="links-header-desktop">
+            <% if(locals.user) { %>
+                <a href="/usuario/minha-conta">
+                    <img src="/images/header/icone-pedidos.svg" alt="Ícone minha conta">
+                    Minha conta
+                </a>
+            <% } else { %>
+                <a href="/usuario/login">
+                    Entrar | Cadastrar
+                </a>
+            <% } %>
+        </div>
+    </section>
+</header>
+
+    

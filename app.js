@@ -5,19 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require("method-override");
 const multer = require("multer");
+const session = require('express-session');
 
-const accountRouter = require('./routes/account');
-const carrinhoRouter = require('./routes/carrinho');
-const checkoutRouter = require('./routes/checkout');
-const contactAboutRouter = require('./routes/contact-about');
-const finalRouter = require('./routes/final');
-const homeRouter = require('./routes/home');
-const loginRouter = require('./routes/login');
-const pedidosRouter = require('./routes/pedidos');
-const plansRouter = require('./routes/plans');
-const productDetailRouter = require('./routes/product-detail');
-const productsListRouter = require('./routes/products-list');
-const registerRouter = require('./routes/register');
+const othersRouter = require('./routes/otherRoutes');
+const userRouter = require('./routes/user');
+const productsRouter = require('./routes/product');
+
+const loggedUserDataMiddleware = require('./middlewares/loggedUserDataMiddleware');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb)
@@ -36,6 +30,12 @@ const upload = multer({
 
 const app = express();
 
+app.use(session({
+  secret: "DigitalPet",
+  resave: false,
+  saveUninitialized: false
+}))
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -47,18 +47,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 
-app.use('/minha-conta', accountRouter);
-app.use('/carrinho', carrinhoRouter);
-app.use('/checkout', checkoutRouter);
-app.use('/contato-sobre-nos', contactAboutRouter);
-app.use('/final', finalRouter);
-app.use('/', homeRouter);
-app.use('/login', loginRouter);
-app.use('/pedidos', pedidosRouter);
-app.use('/planos', plansRouter);
-app.use('/detalhe-produto', productDetailRouter);
-app.use('/lista-produtos', productsListRouter);
-app.use('/registro', registerRouter);
+app.use(loggedUserDataMiddleware);
+
+app.use('/', othersRouter);
+app.use('/usuario', userRouter);
+app.use('/produtos', productsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
