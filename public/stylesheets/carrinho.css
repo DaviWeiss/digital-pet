@@ -61,6 +61,10 @@ strong{
     height: 50px;
 }
 
+.desconto input[type='text']{
+    max-width: 220px;
+}
+
 .desconto input::placeholder{
     font-weight: 300;
     font-size: 20px;
@@ -68,20 +72,19 @@ strong{
     color: #000000;
 }
 
-.desconto button{
+.desconto input[type=submit]{
     height: 50px;
     min-width: 100px;
     background-color: #893B67;
     font-weight: 600;
     font-size: 18px;
     color: #FFFFFF;
-    line-height: 27px;
     border: none;
     transition: filter .8s;
     cursor: pointer;
 }
 
-.desconto button:hover{
+.desconto input[type=submit]:hover{
     filter: brightness(0.8);
 }
 
@@ -107,6 +110,30 @@ strong{
 
 .button-final:hover{
     filter: brightness(0.8);
+}
+
+.input-link{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: var(--link);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    transition: filter 0.8s;
+}
+
+.input-link:hover{
+    filter: brightness(0.4);
+}
+
+.link-add{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.name-quantity form{
+    display: flex;
 }
 
 @media screen and (min-width: 451px){
@@ -142,5 +169,9 @@ strong{
 
     .desconto input{
         max-width: unset;
+    }
+
+    .name-quantity{
+        width: 60%;
     }
 }

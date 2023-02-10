@@ -3,9 +3,9 @@
         <img src="/images/others/email.svg" alt="Icone email para receber novidades">
         <span>Receba novidades e promoções</span>
     </div>
-    <div class="input-receive-news">
-        <input type="text" placeholder="Seu nome" id="news-nome">
-        <input type="text" placeholder="Seu e-mail" id="news-email">
-        <button type="button">Eu quero</button>
-    </div>
+    <form class="input-receive-news" method="post" action="/receber-promocoes">
+        <input type="text" placeholder="Seu nome" name="name" id="name">
+        <input type="email" placeholder="Seu e-mail" name="email" id="email">
+        <input type="submit" value="Eu quero">
+    </form>
 </section>

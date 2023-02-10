@@ -1,3 +1,5 @@
+const OrderProduct = require("./OrderProduct");
+
 module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define("Product", 
     {
@@ -68,6 +70,16 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     } 
     );
+
+    Product.associate = listaModelos => {
+        Product.belongsToMany(listaModelos.OrderDetail, {
+            as: "product_orders",
+            through: "order_product",
+            foreignKey: "product_id",
+            otherKey: "order_id",
+            timestamps: false
+        });
+    }
     
     return Product;
 }

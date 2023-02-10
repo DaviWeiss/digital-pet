@@ -8,24 +8,29 @@ main{
 
 h1{
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .box-card{
+    max-width: 700px;
     min-width: 250px;
     background: #F3DAB4;
     border-radius: 12px;
-    padding: 40px;
+    padding: 20px;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
 
+.box-card img{
+    width: 85%;
+}
+
 .box-card h3{
     font-weight: bold;
-    font-size: 27px;
+    font-size: 25px;
     line-height: 37px;
     text-align: center;
 }
@@ -41,33 +46,27 @@ h1{
     line-height: 27px;
 }
 
-.box-card a{
-    border: none;
-    background: var(--button);
-    height: 55px;
-    width: 100;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
-
-    color: var(--white);
-    min-width: 200px;
-    max-width: 100%;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    transition: filter 0.8s;
-}
-
-.box-card a:hover{
-    filter: brightness(0.8);
+.box-card ul li:first-child{
+    margin-bottom: 10px;
 }
 
 @media screen and (min-width: 481px) {
     .box-card{
+        padding: 40px;
         width: 450px;
+    }
+
+    .box-card img{
+        width: unset;
+    }
+
+    .box-card h3{
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .box-card{
+        width: 750px;
     }
 }

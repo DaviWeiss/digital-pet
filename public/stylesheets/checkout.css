@@ -9,6 +9,13 @@ main{
     align-items: center;
 }
 
+.form-finalize{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
 .box-form{
     margin-top: 40px;
     padding: 20px;
@@ -19,10 +26,44 @@ main{
     justify-content: center;
 }
 
-.box-form-end, .box-form-pay{
+.box-order span, strong {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.box-order strong{
+    font-weight: bold;
+}
+
+.box-form-end, .box-form-pay, .box-order{
     display: none;
     animation-duration: 1s;
     position: relative;
+}
+
+.detalhe-produto {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detalhe-produto img{
+    width: 100px;
+}
+
+.detalhe-produto strong, .detalhe-produto span{
+    font-size: 16px;
+}
+
+.detalhe-produto .space{
+    align-items: center;
+}
+  
+.line {
+    height: 1px;
+    background-color: #000000;
 }
 
 .show-form-end {
@@ -30,7 +71,7 @@ main{
     animation-name: show-form-end;
     animation-duration: 3s;
 }
-  
+
 @keyframes show-form-end {
     0% {
         left: -50%;
@@ -60,6 +101,34 @@ main{
 }
   
 @keyframes show-form-pay {
+    0% {
+        right: -50%;
+        top: -600px;
+        opacity: 0;
+    }
+    
+    25%{
+        opacity: 0.25; 
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        right: 0%;
+        top: 0px;
+        opacity: 1; 
+    }
+}
+
+.show-order-summary {
+    display: unset;
+    animation-name: show-order-summary;
+    animation-duration: 3s;
+}
+  
+@keyframes show-order-summary {
     0% {
         right: -50%;
         top: -600px;
@@ -163,6 +232,22 @@ button:hover{
     line-height: 22px;
     color: red;
     margin-bottom: 10px;
+}
+
+.list-benefits{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style: disc;
+}
+
+.list-benefits li{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.title-benefits{
+    margin-bottom: 20px;
 }
 
 @media screen and (min-width: 769px) {

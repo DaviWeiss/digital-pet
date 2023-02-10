@@ -22,40 +22,58 @@
 
     <main>
         <section class="pedidos">
-            <div class="row space">
-                <span>Produtos (01)</span>
-                <a href="/">Editar carrinho</a>
-            </div>
-
-            <div class="row detalhe-produto space">
-                <img src="./../images/products/popular/product-1.svg" alt="Imagem do produto a comprar">
-                <div class="column">
-                    <strong>Ração Premier Pet Raças Específicas Shih Tzu Filhote</strong>
-                    <span>1 unidade</span>
+            <% if(cartItems != undefined && cartItems.length > 0) { %>
+                <div class="row space">
+                    <span>Produtos (<%= cartItems.length %>)</span>
                 </div>
-                <strong>R$ 95,90</strong>
-            </div>
 
-            <div class="row space desconto">
-                <input type="text" placeholder="Cupom de desconto">
-                <button>Aplicar</button>
-            </div>
+                <% for(let cartItem of cartItems) {%>
+                    <div class="row detalhe-produto space">
+                        <img src="<%= cartItem.image%>" alt="Imagem do produto a comprar">
+                        <div class="column name-quantity">
+                            <strong><%= cartItem.name%></strong>
+                            <span><%= cartItem.quantity%> unidade(s)</span>
+                            <form method="post" action="/produtos/<%= cartItem.id %>/adicionar/?_method=PUT">
+                                <input class="input-link link-add" type="submit" value="Adicionar">
+                            </form>
+                            <form method="POST" action="/produtos/<%= cartItem.id %>/excluir?_method=PUT">
+                                <input class="input-link" type="submit" value="Excluir">
+                            </form>
+                        </div>
+                        <strong><%= cartItem.value %></strong>
+                    </div>
+                <% } %>
 
-            <div class="row space">
-                <span>Subtotal</span>
-                <span>R$ 95,90</span>
-            </div>
-            <div class="row space">
-                <span>Frete</span>
-                <span>--</span>
-            </div>
-            <div class="row space">
-                <strong>Total</strong>
-                <strong>R$ 95,90</strong>
-            </div>
-            <div class="box-btn">
-                <button class="button-final">Finalizar compra</button>
-            </div>
+                <div class="row space desconto">
+                    <% if (!hasDiscount){%>
+                        <form method="post" action="/produtos/carrinho/desconto" >
+                            <input type="text" placeholder="Cupom de desconto" name="discount" id="discount">
+                            <input type="submit" value="Aplicar">
+                        </form>
+                    <% } %>
+                </div>
+
+                <div class="row space">
+                    <span>Subtotal</span>
+                    <span><%= subTotal %></span>
+                </div>
+                <% if (hasDiscount){%>
+                    <div class="row space">
+                        <span>Desconto</span>
+                        <span>10%</span>
+                    </div>
+                <% } %>
+                <div class="row space">
+                    <strong>Total</strong>
+                    <strong><%= totalValueAsString %></strong>
+                </div>
+                
+                <form class="box-btn" method="GET" action="/produtos/checkout">
+                    <button class="button-final">Ir para pagamento</button>
+                </form>
+            <% } else { %>
+                <h1>Carrinho vazio.</h1>
+            <% } %>
         </section>
     </main>
     <script src="/javascripts/carrinho.js"></script>

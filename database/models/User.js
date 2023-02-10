@@ -35,7 +35,11 @@ module.exports = (sequelize, DataTypes) => {
         },
         plan_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'plan',
+                key: 'id'
+            }
         }
     },
     {
@@ -43,6 +47,23 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     } 
     );
+
+    User.associate = listaModelos => {
+        User.hasMany(listaModelos.OrderDetail, {
+            as: "user_orders",
+            foreignKey: "user_id",
+        });
+
+        User.hasMany(listaModelos.NewAndPromotion, {
+            as: "user_news",
+            foreignKey: "user_id",
+        })
+
+        User.belongsTo(listaModelos.Plan, {
+            as: "user_plan",
+            foreignKey: "plan_id"
+        });
+    }
     
     return User;
 }

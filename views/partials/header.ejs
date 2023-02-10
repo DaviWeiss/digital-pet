@@ -10,28 +10,35 @@
             <a href="/">
                 <img src="/images/header/logo-mobile.svg" alt="Logo digital pet">
             </a>
-            <a href="/carrinho">
+            <a href="/produtos/carrinho">
                 <img src="/images/header/icone-carrinho-mobile.svg" alt="Imagem carrinho">
             </a>
         </div>
-        <input type="text" placeholder="O que você precisa?">
     </section>
     <section class="header-desktop">
         <a href="/">
             <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
         </a>
-        <input type="text" placeholder="O que você precisa?">
         <div class="links-header-desktop">
-            <% if(locals.user) { %>
-                <a href="/usuario/minha-conta">
+            <% if(locals.user != "empty") { %>
+                <a style="text-decoration: underline;" href="/usuario/minha-conta" class="menu-link">
                     <img src="/images/header/icone-pedidos.svg" alt="Ícone minha conta">
                     Minha conta
                 </a>
             <% } else { %>
-                <a href="/usuario/login">
-                    Entrar | Cadastrar
+                <a style="text-decoration: underline;" href="/usuario/login" class="menu-link">
+                    <img src="/images/header/icone-entrar-mobile.svg">
+                    Entrar/Cadastrar
                 </a>
             <% } %>
+            <a style="text-decoration: underline;" href="/planos" class="menu-link">
+                <img src="/images/header/icone-planos.svg">
+                Planos DigitalPet
+            </a>
+            <a style="text-decoration: underline;" href="/produtos/carrinho" class="menu-link">
+                <img src="/images/header/icone-carrinho-mobile.svg" alt="Imagem carrinho">
+                Acessar carrinho
+            </a>
         </div>
     </section>
 </header>

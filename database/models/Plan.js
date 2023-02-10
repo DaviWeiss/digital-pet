@@ -1,3 +1,5 @@
+const User = require('./User');
+
 module.exports = (sequelize, DataTypes) => {
     const Plan = sequelize.define("Plan", 
     {
@@ -24,6 +26,12 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     } 
     );
-    
+
+    Plan.associate = listaModelos => {
+        Plan.hasMany(listaModelos.User, {
+            as: "plan_users",
+            foreignKey: "plan_id"
+        });
+    }
     return Plan;
 }

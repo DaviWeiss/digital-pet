@@ -1,3 +1,5 @@
+const User = require("./User");
+
 module.exports = (sequelize, DataTypes) => {
     const OrderDetail = sequelize.define("OrderDetail", 
     {
@@ -6,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             primaryKey: true
         },
-        date: {
-            type: DataTypes.DATE,
+        order_date: {
+            type: DataTypes.STRING(10),
             allowNull: false
         },
         address:{
@@ -15,8 +17,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         complement:{
-            type: DataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.STRING(15),
+            defaultValue: "",
+            allowNull: true
         },
         cep:{
             type: DataTypes.CHAR(9),
@@ -26,13 +29,21 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(30),
             allowNull: false
         },
-        value:{
+        order_value:{
+            type: DataTypes.STRING(20),
+            allowNull: false
+        },
+        status:{
             type: DataTypes.STRING(20),
             allowNull: false
         },
         user_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         }
     },
     {
@@ -40,6 +51,21 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     } 
     );
+
+    OrderDetail.associate = listaModelos => {
+        OrderDetail.belongsToMany(listaModelos.Product, {
+            as: "order_products",
+            through: "order_product",
+            foreignKey: "order_id",
+            otherKey: "product_id",
+            timestamps: false
+        });
+
+        OrderDetail.belongsTo(listaModelos.User, {
+            as: "order",
+            foreignKey: "user_id"
+        });
+    }
     
     return OrderDetail;
 }

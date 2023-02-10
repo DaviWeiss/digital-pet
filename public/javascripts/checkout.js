@@ -2,10 +2,13 @@ const buttonFormData = document.getElementById('button-form-data');
 const buttonFormEnd = document.getElementById('button-form-end');
 const formEnd = document.getElementById('box-form-end');
 const formPay = document.getElementById('box-form-pay');
+const boxOrder = document.getElementById('box-order');
 const formCard = document.getElementById('form-card');
 const cep = document.getElementById('cep');
 const bairro = document.getElementById('bairro');
 const end = document.getElementById('end');
+const rejexCpf = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/;
+
 
 buttonFormData.addEventListener('click', ()=>{
     validityEmail();
@@ -24,7 +27,10 @@ buttonFormEnd.addEventListener('click', ()=>{
     validityEnd();
     validityNum();
     if(validityCep() && validityBairro() && validityEnd() && validityNum()){
-        formPay.classList.add('show-form-pay');
+        boxOrder.classList.add('show-order-summary');
+        setTimeout(() => {
+            formPay.classList.add('show-form-pay');
+        }, 1000)
     }
 });
 
@@ -38,7 +44,7 @@ formCard.addEventListener('submit', (event)=>{
     validityCardBirDate()
     validityCardCel()
     if(validityCardName() && validityCardNum() && validityCardValid() && validityCardCvv() && validityCardCpf() && validityCardBirDate() && validityCardCel()){
-        window.location.href = "/final";
+        
     }
 })
 

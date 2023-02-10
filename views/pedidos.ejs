@@ -21,27 +21,29 @@
     </header>
 
     <main>
-        <h1>Lista de pedidos:</h1>
-        <div class="box-card column">
-            <h3>Pedido: #4576</h3>
-
-            <ul>
-                <li>Data: 18/03/2022</li>
-                <li>Status: Concluído</li>
-                <li>Valor: R$ 40,00</li>
-            </ul>
-        </div>
-
-        <div class="box-card column">
-            <h3>Pedido: #4156</h3>
-
-            <ul>
-                <li>Data: 18/04/2022</li>
-                <li>Status: Cancelado</li>
-                <li>Valor: R$ 32,00</li>
-            </ul>
-        </div>
+        <% if (requests.length > 0) { %>
+            <h1>Lista de pedidos:</h1>
+            <% for (let pedido of requests) { %>
+                <div class="box-card column">
+                    <h3>Pedido: #<%= pedido.id %></h3>
+                    <ul>
+                        <li>Data: <%= pedido.order_date %></li>
+                        <li>Status: <%= pedido.status %></li>
+                        <li>Valor: <%= pedido.order_value %></li>
+                        <% if (pedido.complement) { %> 
+                            <li>Endereço de entrega: <%= pedido.address %>, <%= pedido.complement %></li>
+                        <% } else { %>
+                            <li>Endereço de entrega: <%= pedido.address %></li>
+                        <% } %>
+                        <li>Tipo de pagamento: <%= pedido.payment_type %></li>
+                    </ul>
+                    
+                    <a href="/pedidos/<%= pedido.id %>/produtos">Ver produtos</a>
+                </div>
+            <% } %>
+        <% } else { %>
+            <h1>Você ainda não possui pedidos.</h1>
+        <% } %>
     </main>
-    <script src="/javascripts/carrinho.js"></script>
 </body>
 </html>

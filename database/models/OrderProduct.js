@@ -1,3 +1,5 @@
+const Product = require("./Product");
+
 module.exports = (sequelize, DataTypes) => {
     const OrderProduct = sequelize.define("OrderProduct", 
     {
@@ -8,11 +10,19 @@ module.exports = (sequelize, DataTypes) => {
         },
         order_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'order_detail',
+                key: 'id'
+            }
         },
         product_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'product',
+                key: 'id'
+            }
         }
     },
     {
@@ -20,6 +30,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     } 
     );
-    
+
     return OrderProduct;
 }
