@@ -163,7 +163,6 @@ btnBack.addEventListener('click', ()=>{
 })
 
 function submitForm(errors){
-    console.log(errors);
     let hasErrors = false;
     if(!(errors.indexOf(1) < 0)){
         hasErrors = true;

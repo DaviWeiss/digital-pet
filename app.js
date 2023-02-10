@@ -7,11 +7,13 @@ const methodOverride = require("method-override");
 const multer = require("multer");
 const session = require('express-session');
 
-const othersRouter = require('./routes/otherRoutes');
-const userRouter = require('./routes/user');
-const productsRouter = require('./routes/product');
+const otherRoutes = require('./routes/otherRoutes');
+const planRoutes = require('./routes/planRoutes');
+const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
-const loggedUserDataMiddleware = require('./middlewares/loggedUserDataMiddleware');
+const dataFromUserLoggedMiddleware = require('./middlewares/dataFromUserLoggedMiddleware');
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb)
@@ -47,12 +49,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 
-app.use(loggedUserDataMiddleware);
+app.use(dataFromUserLoggedMiddleware);
 
-app.use('/', othersRouter);
-app.use('/usuario', userRouter);
-app.use('/produtos', productsRouter);
-
+app.use('/', otherRoutes);
+app.use('/planos', planRoutes);
+app.use('/produtos', productRoutes);
+app.use('/usuario', userRoutes);
+app.use('/pedidos', orderRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -308,7 +308,7 @@ textarea:focus, input:focus, select:focus {
     color: var(--text);
 }
 
-.input-receive-news button{
+.input-receive-news input[type="submit"]{
     border: none;
     height: 45px;
     width: 100px;
@@ -326,11 +326,11 @@ textarea:focus, input:focus, select:focus {
     cursor: pointer;
 }
 
-.input-receive-news button:active{
+.input-receive-news input[type="submit"]:active{
     filter: brightness(0.8);
 }
 
-.input-receive-news button:hover{
+.input-receive-news input[type="submit"]:hover{
     filter: brightness(0.8);
 }
 
@@ -343,10 +343,11 @@ textarea:focus, input:focus, select:focus {
     justify-content: space-between;
 }
 
-.links-header-desktop a{
+.links-header-desktop{
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 40px;
 }
 
 .links-desktop{
@@ -356,7 +357,7 @@ textarea:focus, input:focus, select:focus {
 
     display: none;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .links-desktop a {

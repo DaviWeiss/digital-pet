@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/global.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/pedido-detalhes.css" rel="stylesheet" type="text/css">
+    <title>Produtos | Digital Pet</title>
+</head>
+<body>
+    <header>
+        <section class="header-login">
+            <a href="/">
+                <img src="/images/header/logo-desktop.svg" alt="Logo digital pet">
+            </a>
+        </section>
+    </header>
+
+    <main>
+        <h1>Produtos do pedido: #<%= pedido.id %></h1>
+        <% for (let produto of pedido.order_products) { %>
+            <div class="box-card column">
+                <h3><%=produto.name%></h3>
+                <img src="<%=produto.image%>" alt="Produto">
+                <ul>
+                    <li>Valor: <%= produto.value %></li>
+                    <li>Marca: <%= produto.brand %></li>
+                </ul>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

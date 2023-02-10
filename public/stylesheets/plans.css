@@ -49,17 +49,16 @@
     list-style: disc;
 }
 
-.box-card ul li{
+.box-card ul li {
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
 }
 
-.box-card button{
+.box-card a {
     border: none;
     background: var(--button);
     height: 55px;
-    width: 100;
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
@@ -69,10 +68,14 @@
     max-width: 100%;
     cursor: pointer;
 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
     transition: filter 0.8s;
 }
 
-.box-card button:hover{
+.box-card a:hover {
     filter: brightness(0.8);
 }
 

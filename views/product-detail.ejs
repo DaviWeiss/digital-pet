@@ -24,7 +24,7 @@
                         <%=productDetail.name%>
                     </h1>
                     <ul>
-                        <% for (let benefit of benefits) { %>
+                        <% for (let benefit of productDetail.benefits.split(";")) { %>
                             <li><%=benefit%>;</li>
                         <% } %>
                     </ul>
@@ -33,19 +33,16 @@
         </section>
 
         <section class="buttons">
-            <span>Selecionar tamanho:</span>
-            <div class="row">
-                <button class="btn-kg">1 kg</button>
-                <button class="btn-kg">2.5 kg</button>
-            </div>
-            <button class="btn-comprar">Comprar</button>
+            <form method="get" class="column form-column" action="/produtos/<%= productDetail.id %>/carrinho">                    
+                <input type="submit" class="btn-comprar" value="Comprar">
+            </form>
         </section>
 
         <section class="products">
             <h2>Produtos Populares</h2>
             <div class="content-products column">
                 <% for (let product of productList) {%>
-                    <% if (product.type == "other") {%>
+                    <% if (product.type == "popular") {%>
                         <a href="/produtos/<%= product.id %>/detalhe" class="box-products column">
                             <img src="<%=product.image%>" alt="Produto">
                             <p><%=product.name%></p>
@@ -59,104 +56,58 @@
 
         <section class="details-product">
             <h2>Detalhes</h2>
-            <p>
-                Desenvolvida com ingredientes nobres e alta tecnologia, Premier Raças Específicas oferece benefícios exclusivos que visam minimizar os principais problemas de saúde das raças e auxiliar para o pleno desenvolvimento de suas características típicas desejáveis.     
-           </p>
-           <p>
-                A Ração Premier Pet Raças Específicas Shih Tzu Filhote foi formulada a partir deste conceito e oferece tudo o que esta raça precisa para manter sua saúde e beleza. 
-           </p>
-           <p>
-                Oferece ainda redução do volume e odor de fezes minimizando possíveis inconvenientes de uma convivência tão próxima entre os cães e seus proprietários.
-           </p>
-        </section>
-
+            <% for (let detail of productDetail.details.split(";")) { %>
+                <p>
+                    <%= detail %>
+                </p>
+            <% } %>
+        </section> 
         <section class="especific">
             <h2>Especificações</h2>
             <div class="list-details-especific">
                 <ul>
-                    <li>
-                        Indicação: cachorros
-                    </li>
-                    <li>
-                        Raça: Shih Tzu
-                    </li>
-                    <li>
-                        Idade: Filhotes
-                    </li>
-                    <li>
-                        Tamanho do Grão: Grão pequeno
-                    </li>
-                    <li>
-                        Linha: Raças Específicas
-                    </li>
-                    <li>
-                        Tipo de Ração: Super Premium
-                    </li>
-                    <li>
-                        Sabor: Frango
-                    </li>
-                    <li>
-                        Transgênico: Sem transgênico
-                    </li>
-                    <li>
-                        Corante: Sem corante
-                    </li>
+                    <% for (let specific of productDetail.specifications.split(";")) { %>
+                        <li>
+                            <%= specific %>
+                        </li>
+                    <% } %>
                 </ul>
             </div>
+
             <div class="box-compos">
                 <h3>
                     Composição
                 </h3>
 
                 <p>
-                    Farinha de vísceras de frango, glúten de trigo, proteína isolada de suíno, ovo desidratado, quirera de arroz, gordura de frango, gordura suína, óleo de peixe, polpa de beterraba, ácido propiônico, antioxidantes BHA e BHT (0,012%), cloreto de potássio, cloreto de sódio, extrato de yucca (0,06%), frutoligossacarídeos (0,1%), hexametafosfato de sódio, hidrolisado de suíno e frango, levedura seca de cervejaria, mananoligossacarídeos (0,2%), parede celular de levedura, sulfato de condroitina, sulfato de glicosamina, vitamina A, vitamina B12, vitamina C, vitamina D3, vitamina E, vitamina K3, ácido fólico, ácido pantotênico, biotina, cloreto de colina, niacina, piridoxina, riboflavina, tiamina, cobre aminoácido quelato, ferro aminoácido quelato, iodeto de potássio, manganês aminoácido quelato, proteinato de selênio, sulfato de cobre, sulfato de ferro, sulfato de manganês, sulfato de zinco, zinco aminoácido quelato.
+                    <%= productDetail.composition %>
                 </p>
             </div>
+
             <div class="box-normal">
                 <h3>
                     Níveis de garantia
                 </h3>
     
                 <ul>
-                    <li>Umidade (máx.) 100 g/kg	10,00 %</li>
-                    <li>Proteína Bruta (mín.) 280 g/kg 28,00 %</li>
-                    <li>Extrato Etéreo (mín.) 180 g/kg 18,00 %</li>
-                    <li>Matéria Mineral (máx.) 70 g/kg 7,00 %</li>
-                    <li>Matéria Fibrosa (máx.) 35 g/kg 3,50 %</li>
-                    <li>Cálcio (máx.) 14 g/kg 1,40 %</li>
-                    <li>Cálcio (mín.) 9.000 mg/kg 0,90 %</li>
-                    <li>Fósforo (mín.) 8.000 mg/kg 0,80 %</li>
-                    <li>Sódio (mín.) 2.000 mg/kg 0,20 %</li>
-                    <li>Potássio (mín.) 5.000 mg/kg 0,50 %</li>
-                    <li>Ômega 6 (mín.) 32 g/kg 3,20 %</li>
-                    <li>Ômega 3 (mín.) 4.000 mg/kg 0,40 %</li>
-                    <li>DHA (mín.) 1.000 mg/kg 0,10 %</li>
-                    <li>Energia Metabolizável 4.106 kcal/kg</li>
+                    <% for (let warranty of productDetail.warranty_levels.split(";")) { %>
+                        <li>
+                            <%= warranty %>
+                        </li>
+                    <% } %>
                 </ul>
             </div>
+
             <div class="box-normal">                
                 <h3>
                     Enriquecimento por Kg
                 </h3>
                 <ul>
-                    <li>Ácido Fólico 2,08 mg</li>
-                    <li>Ácido Pantotênico 42,67 mg</li>
-                    <li>Biotina 5,00 mg</li>
-                    <li>Cobre 20,00 mg</li>
-                    <li>Colina 400,00 mg</li>
-                    <li>Ferro 88,00 mg</li>
-                    <li>Iodo 1,41 mg</li>
-                    <li>Manganês 35,20 mg</li>
-                    <li>Niacina 64,00 mg</li>
-                    <li>Selênio 0,06 mg</li>
-                    <li>Vitamina A 24.000 UI</li>
-                    <li>Vitamina B1 16,60 mg</li>
-                    <li>Vitamina B12 220,00 mcg</li>
-                    <li>Vitamina B2	28,00 mg</li>
-                    <li>Vitamina B6 9,90 mg</li>
-                    <li>Vitamina C 200,00 mg</li>
-                    <li>Vitamina D3 1.600 UI</li>
-                    <li>Vitamina E 400,00 UI</li>
+                    <% for (let enrichment of productDetail.enrichment.split(";")) { %>
+                        <li>
+                            <%= enrichment %>
+                        </li>
+                    <% } %>
                 </ul>
             </div>
 
@@ -165,30 +116,21 @@
                     Quantidade recomendada
                 </h3>
                 <ul>
-                    <li>
-                        2 a 3 meses: 67 g/dia
-                    </li>
-                    <li>
-                        4 a 5 meses: 98 g/dia
-                    </li>
-                    <li>
-                        6 a 8 meses: 115 g/dia
-                    </li>
-                    <li>
-                        9 a 10 meses: 126 g/dia
-                    </li>
-                    <li>
-                        11 a 12 meses: 125 g/dia
-                    </li>
+                    <% for (let quantity of productDetail.quantity.split(";")) { %>
+                        <li>
+                            <%= quantity %>
+                        </li>
+                    <% } %>
                 </ul>
             </div>
-
             <div class="box-normal">
                 <h4>
-                    Apresentação: 1kg e 2,5kg
+                    <span>Apresentação: </span>
+                    <%= productDetail.sizes.replace(";", ", ") %>
                 </h4>
                 <h4>
-                    Marca: Premier, Premier Super Premium
+                    Marca: 
+                    <%= productDetail.brand %>
                 </h4>
             </div>
         </section>

@@ -19,7 +19,7 @@
     </header>
 
     <main>
-        <a href="/pedidos">Ir para Pedidos</a>
+        <a href="/pedidos">Ir para Meus Pedidos</a>
         <div class="box-form" id="box-form-data">
             <h3>MINHA CONTA</h3>
             <form method="POST" class="column" action="/usuario/<%= locals.user.id %>/editar/?_method=PUT">
@@ -28,7 +28,7 @@
                 <span id="errors-email" class="error"></span>
 
                 <label for="name">Nome*</label>
-                <input type="text" name="name" id="name" placeholder="Nome" value="<%= locals.user.name %>">
+                <input type="text" name="name" id="name" placeholder="Nome" value="<%= locals.user.user_name %>">
                 <span id="errors-name" class="error"></span>
 
                 <label for="lastName">Sobrenome*</label>
@@ -36,7 +36,7 @@
                 <span id="errors-lastName" class="error"></span>
 
                 <label for="cel">Número*</label>
-                <input type="tel" name="cel" id="cel" placeholder="Telefone com DDD" value="<%= locals.user.celular %>">
+                <input type="tel" name="cel" id="cel" placeholder="Telefone com DDD" value="<%= locals.user.cell_phone %>">
                 <span id="errors-cel" class="error"></span>
 
                 <label for="password">Crie uma nova senha caso deseje</label>
